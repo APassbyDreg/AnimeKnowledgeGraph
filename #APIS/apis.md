@@ -35,7 +35,7 @@ url: https://www.bilibili.com/bangumi/media/md + media_id
 
 - `media_id` : 见 `番剧列表 API` 的响应内容
 
-响应内容样例：`bamgumi-profile.html, bamgumi-profile-init.json`
+响应内容样例：`bamgumi-profile-init.json`
 
 重要内容（对于未经 JS 处理的文档）：
 
