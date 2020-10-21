@@ -2,17 +2,12 @@ from py2neo import Node, Relationship, Graph, NodeMatcher, RelationshipMatcher
 import csv
 import json
 
-my_password = ''                # do not upload your password, or I will stick my finger in your a♂s
-graph = Graph('http://localhost:7474', username='neo4j', password=my_password)
-# 打开数据库
-
-
 def CreateNode(m_graph, m_label, m_attrs):
     matcher = NodeMatcher(m_graph)
     re_value = matcher.match(m_label, **m_attrs).first()
     if re_value is None:
         m_node = Node(m_label, **m_attrs)
-        n = graph.create(m_node)
+        n = m_graph.create(m_node)
         return n
     return None
 
@@ -28,7 +23,7 @@ def CreateRelationship(m_graph, m_label1, m_attrs1,
     if re_value1 is None or re_value2 is None:
         return False
     m_r = Relationship(re_value1, m_relation, re_value2)
-    n = graph.create(m_r)
+    n = m_graph.create(m_r)
     return n
 
 def create_from_csv(m_graph, csv_path):
@@ -45,7 +40,7 @@ def create_from_csv(m_graph, csv_path):
             attrs2 = {"name": content[i][j]}
             CreateNode(m_graph, label1, attrs1)
             CreateNode(m_graph, label2, attrs2)
-            reValue = CreateRelationship(graph, label1,
+            reValue = CreateRelationship(m_graph, label1,
                                 attrs1, label2, attrs2, label_list[j])
 
 
@@ -53,4 +48,7 @@ def create_from_json(m_graph, json_path):
     return None
 
 
-create_from_csv(graph, './jojo_test.csv')
+# my_password = ''                # do not upload your password
+# graph = Graph('http://localhost:7474', username='neo4j', password=my_password)
+# 打开数据库
+# create_from_csv(graph, './jojo_test.csv')
