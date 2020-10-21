@@ -1,0 +1,1012 @@
+{
+    "code": 0,
+    "data": {
+        "has_next": 1,
+        "list": [
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/4179b4398bad6f92e876e352cae21be7b8ceb8bf.png",
+                "index_show": "全26话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss26801",
+                "media_id": 22718131,
+                "order": "882.6万追番",
+                "order_type": "fav_count",
+                "season_id": 26801,
+                "season_type": 1,
+                "title": "鬼灭之刃",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/962b27ff452b5daf98038a10a6dad3c134916e7d.png",
+                "index_show": "更新至第8话",
+                "is_finish": 0,
+                "link": "https://www.bilibili.com/bangumi/play/ss34004",
+                "media_id": 28229443,
+                "order": "797.9万追番",
+                "order_type": "fav_count",
+                "season_id": 34004,
+                "season_type": 1,
+                "title": "鬼灭之刃（中配）",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/f2425cbdb07cc93bd0d3ba1c0099bfe78f5dc58a.png",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss33802",
+                "media_id": 28229233,
+                "order": "749.6万追番",
+                "order_type": "fav_count",
+                "season_id": 33802,
+                "season_type": 1,
+                "title": "Re：从零开始的异世界生活 第二季",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/f5d5f51b941c01f8b90b361b412dc75ecc2608d3.png",
+                "index_show": "全14话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss24588",
+                "media_id": 102392,
+                "order": "696.6万追番",
+                "order_type": "fav_count",
+                "season_id": 24588,
+                "season_type": 1,
+                "title": "工作细胞",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/83ad052250e9a803e4ebaa47bef971cb079e0543.png",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss32982",
+                "media_id": 28228367,
+                "order": "686万追番",
+                "order_type": "fav_count",
+                "season_id": 32982,
+                "season_type": 1,
+                "title": "辉夜大小姐想让我告白？～天才们的恋爱头脑战～",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/a223b1376633625be1cd214c34d8bf34a1e03770.jpg",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss5997",
+                "media_id": 5997,
+                "order": "641.6万追番",
+                "order_type": "fav_count",
+                "season_id": 5997,
+                "season_type": 1,
+                "title": "埃罗芒阿老师",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/a79e331b7443ed5df5a2acd345dc41d598d46ff9.jpg",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss6339",
+                "media_id": 6339,
+                "order": "628.4万追番",
+                "order_type": "fav_count",
+                "season_id": 6339,
+                "season_type": 1,
+                "title": "欢迎来到实力至上主义的教室",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/320a6c9893a874e7db755ecb7316a0d0abccec49.jpg",
+                "index_show": "全14话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss5800",
+                "media_id": 5800,
+                "order": "622.2万追番",
+                "order_type": "fav_count",
+                "season_id": 5800,
+                "season_type": 1,
+                "title": "小林家的龙女仆",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/54d9ca94ca84225934e0108417c2a1cc16be38fb.png",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss32781",
+                "media_id": 28228119,
+                "order": "618.6万追番",
+                "order_type": "fav_count",
+                "season_id": 32781,
+                "season_type": 1,
+                "title": "刀剑神域 爱丽丝篇 异界战争 -终章-",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/451037aabcdce0379752e087720673609894161a.png",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss26274",
+                "media_id": 5267730,
+                "order": "614.7万追番",
+                "order_type": "fav_count",
+                "season_id": 26274,
+                "season_type": 1,
+                "title": "辉夜大小姐想让我告白～天才们的恋爱头脑战～",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/a4c0e0ccc44fe3949a734f546cf5bb07da925bad.png",
+                "index_show": "全28话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss25739",
+                "media_id": 139252,
+                "order": "601.6万追番",
+                "order_type": "fav_count",
+                "season_id": 25739,
+                "season_type": 1,
+                "title": "关于我转生变成史莱姆这档事",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/1cc333ff578e5ea9fded7e454953a4e2291440c2.png",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss25733",
+                "media_id": 134932,
+                "order": "587.1万追番",
+                "order_type": "fav_count",
+                "season_id": 25733,
+                "season_type": 1,
+                "title": "青春猪头少年不会梦到兔女郎学姐",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/b6e3986355efc081b7f4aaf9f576c9ce8116e193.jpg",
+                "index_show": "全14话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss21542",
+                "media_id": 8892,
+                "order": "583.4万追番",
+                "order_type": "fav_count",
+                "season_id": 21542,
+                "season_type": 1,
+                "title": "紫罗兰永恒花园",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/85c6e348a00a54d0b86d538efb186e006a027e21.png",
+                "index_show": "全25话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss29325",
+                "media_id": 28224095,
+                "order": "574.6万追番",
+                "order_type": "fav_count",
+                "season_id": 29325,
+                "season_type": 1,
+                "title": "某科学的超电磁炮T",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/3c125e1aad08643e3eff2fb7d45e740c1a052725.png",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss29590",
+                "media_id": 28224394,
+                "order": "558.6万追番",
+                "order_type": "fav_count",
+                "season_id": 29590,
+                "season_type": 1,
+                "title": "Re：从零开始的异世界生活 新编集版",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/107eb93eff876dee16da4bf270b31c3e250e49d6.png",
+                "index_show": "2020-01-10上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss31779?theme=movie",
+                "media_id": 28226644,
+                "order": "553.3万追剧",
+                "order_type": "fav_count",
+                "season_id": 31779,
+                "season_type": 2,
+                "title": "紫罗兰永恒花园外传：永远与自动手记人偶",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/7c1f3ca60da441ffbc2425409ee2a5c379264568.jpg",
+                "index_show": "全25话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss3461",
+                "media_id": 3461,
+                "order": "536.5万追番",
+                "order_type": "fav_count",
+                "season_id": 3461,
+                "season_type": 1,
+                "title": "Re：从零开始的异世界生活",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/327056a886f2c7cba6175a80eed2f78098cec5b1.png",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss28615",
+                "media_id": 28222723,
+                "order": "510.7万追番",
+                "order_type": "fav_count",
+                "season_id": 28615,
+                "season_type": 1,
+                "title": "刀剑神域 爱丽丝篇 异界战争",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/82d628408f5472f1440982e880b0b4f0146862ad.png",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss32998",
+                "media_id": 28228386,
+                "order": "506.9万追番",
+                "order_type": "fav_count",
+                "season_id": 32998,
+                "season_type": 1,
+                "title": "我的青春恋爱物语果然有问题。完",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/074056b8543ed2ceb53dc13a79da1eafa3fa921a.jpg",
+                "index_show": "全22话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss3398",
+                "media_id": 3398,
+                "order": "503.6万追番",
+                "order_type": "fav_count",
+                "season_id": 3398,
+                "season_type": 1,
+                "title": "冰菓",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/14ba6643f22405e2777cca992002cc6411601334.jpg",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss3450",
+                "media_id": 3450,
+                "order": "499.5万追番",
+                "order_type": "fav_count",
+                "season_id": 3450,
+                "season_type": 1,
+                "title": "在下坂本，有何贵干？",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/05859fac3ad9be31373e2d2b548a2f14fd472de2.png",
+                "index_show": "全1话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss31151",
+                "media_id": 28226009,
+                "order": "488.6万追番",
+                "order_type": "fav_count",
+                "season_id": 31151,
+                "season_type": 1,
+                "title": "Re：从零开始的异世界生活 冰结之绊",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/137c9c239aed5d7666f35ab1d28528547d05544f.png",
+                "index_show": "全1话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss31150",
+                "media_id": 28226008,
+                "order": "486.8万追番",
+                "order_type": "fav_count",
+                "season_id": 31150,
+                "season_type": 1,
+                "title": "Re：从零开始的异世界生活 Memory Snow(雪之回忆)",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/dd7a9d0a0bee32b1f43c2656398d8463d12b3069.jpg",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss24596",
+                "media_id": 102252,
+                "order": "479.5万追番",
+                "order_type": "fav_count",
+                "season_id": 24596,
+                "season_type": 1,
+                "title": "OVERLORD Ⅲ",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/716297d3ec59a00817ef54ad1aa842231a913b25.jpg",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss6312",
+                "media_id": 6312,
+                "order": "470万追番",
+                "order_type": "fav_count",
+                "season_id": 6312,
+                "season_type": 1,
+                "title": "徒然喜欢你",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/851f979c8ebcc7583a43abd4b786c4e2e66b746b.jpg",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss21466",
+                "media_id": 8792,
+                "order": "465.6万追番",
+                "order_type": "fav_count",
+                "season_id": 21466,
+                "season_type": 1,
+                "title": "OVERLORD Ⅱ",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/0f11dfac18d744518669b2d211263f03d41d619c.png",
+                "index_show": "全16话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss24625",
+                "media_id": 102792,
+                "order": "461.9万追番",
+                "order_type": "fav_count",
+                "season_id": 24625,
+                "season_type": 1,
+                "title": "Angels of Death",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/b8e72ea69e57e0b7ac85d8b4d366554fd866df1a.jpg",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss2576",
+                "media_id": 2576,
+                "order": "461.4万追番",
+                "order_type": "fav_count",
+                "season_id": 2576,
+                "season_type": 1,
+                "title": "OVERLORD",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/8021d3f6b0df6dbba6d32f76eb9cfe2531e166c4.png",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss29358",
+                "media_id": 28224137,
+                "order": "461万追番",
+                "order_type": "fav_count",
+                "season_id": 29358,
+                "season_type": 1,
+                "title": "因为太怕痛就全点防御力了",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/cfafce51c36912bbe0b25993c7fd9489456c7120.png",
+                "index_show": "全1话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss28965?theme=movie",
+                "media_id": 28223480,
+                "order": "456.8万追番",
+                "order_type": "fav_count",
+                "season_id": 28965,
+                "season_type": 1,
+                "title": "青春猪头少年不会梦到怀梦美少女",
+                "title_icon": ""
+            },
+            {
+                "badge": "出品",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "出品"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/e4edc4b821e92840453fe6e36ade81d92e85d0bc.jpg",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss6446",
+                "media_id": 6446,
+                "order": "440.7万追番",
+                "order_type": "fav_count",
+                "season_id": 6446,
+                "season_type": 1,
+                "title": "干物妹！小埋R",
+                "title_icon": ""
+            },
+            {
+                "badge": "限时免费",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "限时免费"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/aad797f1f0212aba5578a1ed1c992ef1b9ff7c4b.jpg",
+                "index_show": "全24话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss425",
+                "media_id": 425,
+                "order": "439.6万追番",
+                "order_type": "fav_count",
+                "season_id": 425,
+                "season_type": 1,
+                "title": "某科学的超电磁炮",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/f5128c939b24909c7cb75bab51be0ee0c4d1b33a.jpg",
+                "index_show": "全22话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss1699",
+                "media_id": 1699,
+                "order": "436.4万追番",
+                "order_type": "fav_count",
+                "season_id": 1699,
+                "season_type": 1,
+                "title": "四月是你的谎言",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/473b8f1c7e23c79b868ef46df3f3cff67362f285.jpg",
+                "index_show": "全24话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss25510",
+                "media_id": 130412,
+                "order": "435.2万追番",
+                "order_type": "fav_count",
+                "season_id": 25510,
+                "season_type": 1,
+                "title": "刀剑神域 Alicization",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/30d3ed74b5716646151a3cf5f8386b2be18420fe.png",
+                "index_show": "更新至第1话",
+                "is_finish": 0,
+                "link": "https://www.bilibili.com/bangumi/play/ss34405",
+                "media_id": 28229874,
+                "order": "425.7万追番",
+                "order_type": "fav_count",
+                "season_id": 34405,
+                "season_type": 1,
+                "title": "约战狂三外传",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/9d8d2922b08f3d08d018e6e59e49607cf16d39e6.png",
+                "index_show": "全26话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss4334",
+                "media_id": 28223479,
+                "order": "424.9万追番",
+                "order_type": "fav_count",
+                "season_id": 4334,
+                "season_type": 1,
+                "title": "JOJO的奇妙冒险",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/ef60e620eb507d48c1e8e6002728fae4553f9161.png",
+                "index_show": "全22话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss28320",
+                "media_id": 28222061,
+                "order": "423.3万追番",
+                "order_type": "fav_count",
+                "season_id": 28320,
+                "season_type": 1,
+                "title": "命运-冠位指定 绝对魔兽战线 巴比伦尼亚",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/0ede47280762947ab83ce1a8269ce05f2b0a87e6.jpg",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss28625",
+                "media_id": 28222736,
+                "order": "421.3万追番",
+                "order_type": "fav_count",
+                "season_id": 28625,
+                "season_type": 1,
+                "title": "这个勇者明明超强却过分慎重",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/207b3c90f16629eb54f060d54d5efb7d29bb9563.jpg",
+                "index_show": "全12话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss2580",
+                "media_id": 2580,
+                "order": "417.3万追番",
+                "order_type": "fav_count",
+                "season_id": 2580,
+                "season_type": 1,
+                "title": "干物妹！小埋",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/c65e3bf95f1e8fa4aeaa9796c58b0b87fa2545f4.png",
+                "index_show": "全1话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss34394",
+                "media_id": 28229860,
+                "order": "408.7万追番",
+                "order_type": "fav_count",
+                "season_id": 34394,
+                "season_type": 1,
+                "title": "路人女主的养成方法 Fine",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/4de96771bc75627711470bf0864dda9c3e950bbc.png",
+                "index_show": "2019-07-12上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss28332?theme=movie",
+                "media_id": 28222114,
+                "order": "390万追剧",
+                "order_type": "fav_count",
+                "season_id": 28332,
+                "season_type": 2,
+                "title": "命运之夜——天之杯II ：迷失之蝶",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/f34ff3975c39913af936c133ae60a5891babba08.png",
+                "index_show": "全39话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss25681",
+                "media_id": 135652,
+                "order": "387.7万追番",
+                "order_type": "fav_count",
+                "season_id": 25681,
+                "season_type": 1,
+                "title": "JOJO的奇妙冒险 黄金之风",
+                "title_icon": ""
+            },
+            {
+                "badge": "出品",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "出品"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/3fc16a667502cbff226e585eb660a96a20c7458c.png",
+                "index_show": "全24话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss26146",
+                "media_id": 4312482,
+                "order": "386.2万追番",
+                "order_type": "fav_count",
+                "season_id": 26146,
+                "season_type": 1,
+                "title": "多罗罗",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/1804e361cc9fefad1fd8be8245f3b35ff685ae1a.jpg",
+                "index_show": "全25话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss6301",
+                "media_id": 6301,
+                "order": "385.5万追番",
+                "order_type": "fav_count",
+                "season_id": 6301,
+                "season_type": 1,
+                "title": "Fate/Apocrypha",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/de944b7c9306932d8dd3dcaeaf2eeec8670deec5.png",
+                "index_show": "全25话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss26284",
+                "media_id": 4316482,
+                "order": "378.7万追番",
+                "order_type": "fav_count",
+                "season_id": 26284,
+                "season_type": 1,
+                "title": "盾之勇者成名录",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/9bf9e66968f85b33ec3769a16c86b36dc984abbc.png",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss29310",
+                "media_id": 28224080,
+                "order": "377.8万追番",
+                "order_type": "fav_count",
+                "season_id": 29310,
+                "season_type": 1,
+                "title": "异度侵入 ID:INVADED",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/e67e09c9e48a32371a81100e0f65a61b18aabb24.png",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss1586",
+                "media_id": 1586,
+                "order": "373.8万追番",
+                "order_type": "fav_count",
+                "season_id": 1586,
+                "season_type": 1,
+                "title": "Fate/stay night [Unlimited Blade Works] 第一季",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/9c3e77244687a81e4b75e88ec22eeb8dbaa26380.jpg",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss2572",
+                "media_id": 2572,
+                "order": "372.8万追番",
+                "order_type": "fav_count",
+                "season_id": 2572,
+                "season_type": 1,
+                "title": "Charlotte",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/47c0108259355d6d2c517ed97f6b90fb777f844f.png",
+                "index_show": "全24话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss4185",
+                "media_id": 28223481,
+                "order": "370.6万追番",
+                "order_type": "fav_count",
+                "season_id": 4185,
+                "season_type": 1,
+                "title": "JOJO的奇妙冒险  星尘远征军",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/8d1200b8c8b795dd3a7baae33afcec42fbd1947c.png",
+                "index_show": "全13话",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss1539",
+                "media_id": 1539,
+                "order": "368.1万追番",
+                "order_type": "fav_count",
+                "season_id": 1539,
+                "season_type": 1,
+                "title": "我的青春恋爱物语果然有问题。",
+                "title_icon": ""
+            }
+        ],
+        "num": 1,
+        "size": 50,
+        "total": 3160
+    },
+    "message": "success"
+}

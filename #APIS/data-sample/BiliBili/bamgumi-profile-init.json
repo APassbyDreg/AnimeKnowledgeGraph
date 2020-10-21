@@ -1,0 +1,334 @@
+{
+    "ver": {},
+    "loginInfo": {
+        "isLogin": null
+    },
+    "loginChecked": false,
+    "userStatus": {},
+    "area": 0,
+    "mediaInfo": {
+        "activity": {
+            "head_bg_url": "",
+            "id": 0,
+            "title": ""
+        },
+        "actors": "伍六七：何小疯\n鸡大保：姜广涛\n梅花十三：段艺璇\n小飞鸡：赵寒\n何大春：斑马\n陈伯：侯俊杰\n青凤：姜广涛\n江主任：刘小倩\n汪疯：赵成晨\n猫小咪：江惠琴\n王子：文森\n杰克船长：袁铭喆\n可乐：赵寒\n",
+        "alias": "刺客伍六七,刺客567,刺客五六七",
+        "areas": [
+            {
+                "id": 1,
+                "name": "中国大陆"
+            }
+        ],
+        "copyright": {
+            "is_finish": 1,
+            "is_started": 1
+        },
+        "cover": "http:\u002F\u002Fi0.hdslb.com\u002Fbfs\u002Fbangumi\u002Fimage\u002Fd179871a635e9c908a53be6580714ce3c6fee5ba.jpg",
+        "episode_index": {
+            "id": 304649,
+            "index": "10",
+            "index_show": "全10话",
+            "is_new": 0,
+            "play_index_show": ""
+        },
+        "evaluate": "伍六七在帮助别人和寻找自我的过程中，认识了不同的人，并与不同角色之间发生了有趣的故事，最终用爱与包容化解了仇恨与偏见。",
+        "long_review": {
+            "next": 80483392294925,
+            "normal": 108,
+            "total": 108,
+            "count": 108,
+            "list": [
+                {
+                    "review_id": 78038,
+                    "stat": {
+                        "reply": 94,
+                        "likes": 1260
+                    },
+                    "author": {
+                        "uname": "浪迹云行",
+                        "mid": 80745726,
+                        "avatar": "http:\u002F\u002Fi0.hdslb.com\u002Fbfs\u002Fface\u002Fe0cf07d6537af315ff7688dfcc854287f9447106.jpg",
+                        "vip": {
+                            "vipType": 2,
+                            "vipStatus": 1
+                        }
+                    },
+                    "mid": 80745726,
+                    "title": "前三集观感总结",
+                    "mtime": 1572410648,
+                    "content": "我可以肯定，会有人不喜欢第三集这个“猫血”的故事。前两集播出的时候，知乎就有人喷春风一郎光速洗白，我觉得这很正常。刺客伍六七并不是一个严肃的故事，也不是一个严肃的世界，只是讲述着一些温馨，点到即止的故事……很看中剧情合理性逻辑性的人肯定会觉得不舒服，我完全可以理解。第三集的故事，其实和第一季很多单集故事一样，点到即止，并且留下了一个相对美好的结局。被感动到的人会泪目，像我这种没亲身体验过的也会会心一笑，但有人(弹幕里就有)则会发自内心的觉得:我看了个啥?刺客伍六七是一个很看个人口味的作品，喜欢的",
+                    "url": "https:\u002F\u002Fwww.bilibili.com\u002Fread\u002Fcv3866206",
+                    "article_id": 3866206,
+                    "score": 10,
+                    "is_origin": 1,
+                    "media_id": 28222513,
+                    "ctime": 1572410641,
+                    "progress": "看到第3话"
+                },
+                {
+                    "review_id": 83816,
+                    "stat": {
+                        "reply": 58,
+                        "likes": 612
+                    },
+                    "author": {
+                        "uname": "逆推王道",
+                        "mid": 1535533,
+                        "avatar": "http:\u002F\u002Fi2.hdslb.com\u002Fbfs\u002Fface\u002F3cc6d210c34528192d4c01a7031de3f0f0f42ac0.jpg",
+                        "vip": {
+                            "vipType": 2,
+                            "vipStatus": 1
+                        }
+                    },
+                    "mid": 1535533,
+                    "title": "自称岛上最强发型师的男人，最终还是拿起了魔刀",
+                    "mtime": 1577855173,
+                    "content": "第二季属于柒的戏份相对于第一季来说绝对是少了许多的。大多数的篇幅都用来讲述了各个配角们（或者说是五六七的朋友们）的故事。当然，哪怕是支线，最后依然是服务于主线，那就是给五六七反攻玄武国提供了必要的条件。日常是如此的温馨美好。抛弃曾经那刺客的过往，没有了打打杀杀，每一天都可以过的如此开心。但树欲静而风不止，曾经的身份，还是无可避免的带来了诸多的麻烦。事实上，想抛弃过往好好过日子的人，在第二季中比比皆是。类似于功夫里面的包租公与包租婆以及租住在他们那里的那帮隐世高手是宿命的捉弄？还是世事的无奈？也许",
+                    "url": "https:\u002F\u002Fwww.bilibili.com\u002Fread\u002Fcv4267664",
+                    "article_id": 4267664,
+                    "score": 10,
+                    "is_origin": 1,
+                    "media_id": 28222513,
+                    "ctime": 1577854754,
+                    "progress": "看到第10话"
+                },
+                {
+                    "review_id": 135181,
+                    "stat": {
+                        "reply": 3,
+                        "likes": 212
+                    },
+                    "author": {
+                        "uname": "Cu的动画Review",
+                        "mid": 343294128,
+                        "avatar": "http:\u002F\u002Fi0.hdslb.com\u002Fbfs\u002Fface\u002F550cef71f08163b78ad0db95e7bc1370b69bb11f.jpg",
+                        "vip": {
+                            "vipType": 1,
+                            "vipStatus": 1
+                        }
+                    },
+                    "mid": 343294128,
+                    "title": "【刺客伍六七2】一部精雕细琢的续作",
+                    "mtime": 1600744189,
+                    "content": "英语文稿：Cuchallain 翻译菌：阿怿，平生欢，吾酒【因为这是存货视频的文稿，为了配合发视频的时间，所以有些地方没有直译】Hellzyes! Scissor Seven returned today to the west with Netflix's release of season2!欧耶！《刺客伍六七》第二季终于上线欧美 在Netflix上播出了！The first season of this donghua or Chinese animation blew people's",
+                    "url": "https:\u002F\u002Fwww.bilibili.com\u002Fread\u002Fcv7692385",
+                    "article_id": 7692385,
+                    "score": 10,
+                    "is_origin": 1,
+                    "media_id": 28222513,
+                    "ctime": 1600744146
+                }
+            ]
+        },
+        "media_id": 28222513,
+        "mode": 0,
+        "origin_name": "",
+        "payment": {
+            "discount": 100,
+            "pay_type": {
+                "allow_discount": 0,
+                "allow_pack": 0,
+                "allow_ticket": 0,
+                "allow_time_limit": 0,
+                "allow_vip_discount": 0,
+                "forbid_bb": 0
+            },
+            "price": "0.0",
+            "promotion": "",
+            "tip": "大会员专享观看特权哦~",
+            "vip_discount": 100,
+            "vip_first_promotion": "",
+            "vip_promotion": "成为大会员抢先理发"
+        },
+        "publish": {
+            "is_finish": 1,
+            "is_started": 1,
+            "pub_date": "2019-10-23",
+            "pub_date_show": "",
+            "release_date_show": "2019年10月23日开播",
+            "time_length_show": "已完结, 全10话"
+        },
+        "rating": {
+            "count": 83798,
+            "score": 9.8
+        },
+        "rights": {
+            "allow_bp": 0,
+            "allow_bp_rank": 0,
+            "allow_review": 1,
+            "can_watch": 1,
+            "copyright": "bilibili"
+        },
+        "season_id": 28510,
+        "season_status": 13,
+        "seasons": [
+            {
+                "is_new": 0,
+                "media_id": 6360,
+                "season_id": 6360,
+                "season_title": "第一季",
+                "title": "刺客伍六七",
+                "type": 4
+            },
+            {
+                "is_new": 0,
+                "media_id": 28222513,
+                "season_id": 28510,
+                "season_title": "第二季",
+                "title": "伍六七之最强发型师",
+                "type": 4
+            }
+        ],
+        "short_review": {
+            "next": 80401799482059,
+            "total": 24948,
+            "list": [
+                {
+                    "review_id": 9968335,
+                    "score": 10,
+                    "stat": {
+                        "likes": 9268
+                    },
+                    "author": {
+                        "uname": "我是爱鱼不吃鱼",
+                        "mid": 365812875,
+                        "avatar": "http:\u002F\u002Fi1.hdslb.com\u002Fbfs\u002Fface\u002Fafa5697feaf671d6011d90e1168556489c4835a8.jpg",
+                        "vip": {
+                            "vipType": 2,
+                            "vipStatus": 1
+                        }
+                    },
+                    "media_id": 28222513,
+                    "mid": 365812875,
+                    "ctime": 1573624672,
+                    "progress": "看到第4话",
+                    "mtime": 1573624672,
+                    "content": "万人血书求十三泳装（1\u002F10000）"
+                },
+                {
+                    "review_id": 16002491,
+                    "score": 10,
+                    "stat": {
+                        "likes": 594
+                    },
+                    "author": {
+                        "uname": "星小辰鸭ovo",
+                        "mid": 86432379,
+                        "avatar": "http:\u002F\u002Fi0.hdslb.com\u002Fbfs\u002Fface\u002F82e612c32bfa920d3bce93e97b7fee9b28a15417.jpg",
+                        "vip": {
+                            "vipType": 2,
+                            "vipStatus": 1
+                        }
+                    },
+                    "media_id": 28222513,
+                    "mid": 86432379,
+                    "ctime": 1584251841,
+                    "progress": "看到第10话",
+                    "mtime": 1584251841,
+                    "content": "万人血书第三季（1\u002F10000）                                           ↓↓↓"
+                },
+                {
+                    "review_id": 11700939,
+                    "score": 10,
+                    "stat": {
+                        "likes": 635
+                    },
+                    "author": {
+                        "uname": "躺尸堆里的一只落醉",
+                        "mid": 15090696,
+                        "avatar": "http:\u002F\u002Fi1.hdslb.com\u002Fbfs\u002Fface\u002F62b1ec9aae275c89a5717b053748ac9729bff6b7.jpg",
+                        "vip": {
+                            "vipType": 1,
+                            "vipStatus": 1
+                        }
+                    },
+                    "media_id": 28222513,
+                    "mid": 15090696,
+                    "ctime": 1579049926,
+                    "progress": "看到第10话",
+                    "mtime": 1579049926,
+                    "content": "知道账号密码却宁死都只肯用小号打排位的大佬"
+                }
+            ]
+        },
+        "staff": "出品人：邹沙沙\n制片人：邹沙沙\n导演：何小疯\n编剧：何小疯\n",
+        "stat": {
+            "danmakus": 1872580,
+            "favorites": 6241124,
+            "series_follow": 6982982,
+            "views": 226590634
+        },
+        "styles": [
+            {
+                "id": 10010,
+                "name": "原创"
+            },
+            {
+                "id": 10016,
+                "name": "热血"
+            },
+            {
+                "id": 10020,
+                "name": "战斗"
+            },
+            {
+                "id": 10021,
+                "name": "搞笑"
+            }
+        ],
+        "time_length": 0,
+        "title": "伍六七之最强发型师",
+        "type": 4,
+        "type_name": "国创",
+        "param": {
+            "season_id": 28510,
+            "season_type": 4
+        }
+    },
+    "comicInfo": [],
+    "shortTotal": 24948,
+    "recomList": [],
+    "currentIndex": null,
+    "userReview": {},
+    "shortReviewInfo": {
+        "$error": false,
+        "review_id": 0,
+        "content": "",
+        "is_coin": 0,
+        "user_rating": {
+            "score": -1
+        },
+        "likes": 0,
+        "liked": 0,
+        "disliked": 0,
+        "ctime": 0,
+        "mtime": 0
+    },
+    "longReviewInfo": {},
+    "userScore": -1,
+    "seasonFollowed": false,
+    "sponsorTotal": {
+        "code": 0,
+        "result": {
+            "ep_bp": 0,
+            "users": 0,
+            "mine": {},
+            "list": []
+        }
+    },
+    "sponsorWeek": {
+        "code": 0,
+        "result": {
+            "ep_bp": 0,
+            "users": 0,
+            "mine": {},
+            "list": []
+        }
+    },
+    "sponsorStat": 0,
+    "sponsorTotalCount": 0,
+    "sectionList": [],
+    "mainSectionList": {},
+    "showBv": true
+}
