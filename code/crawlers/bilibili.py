@@ -7,7 +7,7 @@ import time
 import json
 
 
-IGNORE_TITLE = {"僅限", "地區"}
+IGNORE_TITLE = {"僅限", "地區", "中配"}
 
 
 def get_bangumi_index():
