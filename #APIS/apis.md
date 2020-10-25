@@ -93,3 +93,21 @@ pip install bilibili_api
 ```
 
 文档：https://passkou.com/bilibili_api/docs/
+
+
+### 番剧整合目录信息
+
+> 各类番剧的整合目录，包含了指向各个网站的目录地址
+
+url: https://cdn.jsdelivr.net/npm/anime-sachedule-search-data@0.1/dist/data.json
+
+目录信息摘要：
+
+- `data["sites"][where elem['site'] == 'bilibili']['id']` ssid
+- `data["sites"][where elem['site'] == 'bangumi']['id']` bangumi subject id
+
+### bangumi API
+
+> 来自 bangumi 的信息
+
+url: https://cdn.jsdelivr.net/npm/anime-sachedule-search-data@0.1/dist/subject/{bangumi_id}.json
