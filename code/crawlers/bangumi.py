@@ -36,8 +36,3 @@ def get_subject(subject_id):
         raise ValueError("invalid subject id")
 
     return data
-
-
-if __name__ == "__main__":
-    subject = get_subject(218708)
-    print(is_valid(subject))
