@@ -1,0 +1,58 @@
+{
+    "id": 211091,
+    "url": "http://bgm.tv/subject/211091",
+    "type": 2,
+    "name": "ゲゲゲの鬼太郎",
+    "name_cn": "鬼太郎",
+    "summary": "",
+    "eps": [
+        {
+            "id": 913343,
+            "url": "http://bgm.tv/ep/913343",
+            "type": 0,
+            "sort": 1,
+            "name": "",
+            "name_cn": "",
+            "duration": "",
+            "airdate": "",
+            "comment": 0,
+            "desc": "",
+            "status": "Air"
+        }
+    ],
+    "eps_count": 1,
+    "air_date": "1968-07-21",
+    "air_weekday": 7,
+    "rating": {
+        "total": 1,
+        "count": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 1,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0
+        },
+        "score": 6
+    },
+    "images": {
+        "large": "http://lain.bgm.tv/pic/cover/l/2e/eb/211091_3jUpS.jpg",
+        "common": "http://lain.bgm.tv/pic/cover/c/2e/eb/211091_3jUpS.jpg",
+        "medium": "http://lain.bgm.tv/pic/cover/m/2e/eb/211091_3jUpS.jpg",
+        "small": "http://lain.bgm.tv/pic/cover/s/2e/eb/211091_3jUpS.jpg",
+        "grid": "http://lain.bgm.tv/pic/cover/g/2e/eb/211091_3jUpS.jpg"
+    },
+    "collection": {
+        "collect": 3,
+        "on_hold": 1,
+        "dropped": 3
+    },
+    "crt": null,
+    "staff": null,
+    "topic": null,
+    "blog": null
+}
