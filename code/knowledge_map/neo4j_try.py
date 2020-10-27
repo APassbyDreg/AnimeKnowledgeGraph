@@ -43,8 +43,6 @@ def create_from_csv(m_graph, csv_path):
             for element in ele_list:
                 label2 = label_list[j]
                 attrs2 = {"name": element}
-            #label2 = label_list[j]
-            #attrs2 = {"name": content[i][j]}
                 CreateNode(m_graph, label1, attrs1)
                 CreateNode(m_graph, label2, attrs2)
                 reValue = CreateRelationship(m_graph, label1,
