@@ -55,5 +55,27 @@ def crawl(num, header):
                 dic[str(attribute)] = value_b
             else:
                 dic[str(attribute)] = value_a
-    print(dic)
+    #print(dic)
     return dic
+
+def get_final_json(json_path, header):
+    with open(json_path, 'r', encoding="UTF-8") as fp:
+        json_list = json.load(fp)
+    i = 0
+    crawl_result = {}
+    for index in json_list:
+        try:
+            subject = get_subject(index)
+            _valid = is_valid(subject)
+        except:
+            continue
+        if _valid is True:
+            dic = crawl(index, header)
+            crawl_result[i] = dic
+        i += 1
+        if i % 10 == 0:
+            print("turn {} finished".format(i))
+        if i > 5000:
+            break
+    with open("./data/crawl_result.json", 'w', encoding="UTF-8") as fp:
+        json.dump(crawl_result, fp, ensure_ascii=False)
