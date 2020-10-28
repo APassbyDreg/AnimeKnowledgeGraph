@@ -67,15 +67,15 @@ def get_final_json(json_path, header):
         try:
             subject = get_subject(index)
             _valid = is_valid(subject)
+            if _valid is True:
+                dic = crawl(index, header)
+                crawl_result[i] = dic
         except:
             continue
-        if _valid is True:
-            dic = crawl(index, header)
-            crawl_result[i] = dic
         i += 1
         if i % 10 == 0:
             print("turn {} finished".format(i))
         if i > 5000:
             break
-    with open("./data/crawl_result.json", 'w', encoding="UTF-8") as fp:
-        json.dump(crawl_result, fp, ensure_ascii=False)
+        with open("./data/crawl_result.json", 'w', encoding="UTF-8") as fp:
+            json.dump(crawl_result, fp, ensure_ascii=False)
