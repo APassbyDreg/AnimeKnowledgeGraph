@@ -94,17 +94,17 @@ def crawl_all(index):
             subject = get_subject(subject_id)
             if is_valid(subject):
                 records[subject_id] = subject
-                status = 'valid'
+                status = '  valid'
             else:
                 status = 'invalid'
         except:
             # 如果出现问题则在有限失败次数内重新加入队列等待重试
-            status = 'failed'
+            status = ' failed'
             failed_times[subject_id] = failed_times.get(subject_id, 0) + 1
             if failed_times[subject_id] < FAILED_THRES:
                 time.sleep(1)
                 waitlist.append(subject_id)
-        print("try {} {}: {} crawled, {} remaining".format(run_times, status, len(records), len(waitlist)))
+        print("try {:-4d} {}: {:-4d} crawled, {:-4d} remaining".format(run_times, status, len(records), len(waitlist)))
 
     return records
 
