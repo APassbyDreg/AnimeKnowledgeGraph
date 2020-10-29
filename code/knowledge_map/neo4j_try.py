@@ -53,22 +53,40 @@ def create_from_csv(m_graph, csv_path):
 def create_from_json(m_graph, json_path):
     with open(json_path, 'r', encoding="UTF-8") as fp:
         loader = json.load(fp)
-    key_list = list(loader.keys())
-    for key in key_list:
-        now_dict = loader[key]
-        label_name = "番剧名"
-        for k, v in now_dict.item():
-            comic = ""
-            if k == "中文名":
-                for comic_name in v:
-                    CreateNode(m_graph, label_name, comic_name)
-                    comic = comic_name
-            else:
-                relation_name = "参与制作"
-                for in_name in v:
-                    CreateNode(m_graph, k, in_name)
-                    CreateRelationship(m_graph, label_name, comic,
-                                       k, in_name, relation_name)
+    i = 0
+    for k, v in loader.items():
+        label_comic = "comic"
+        attrs_comic = {"name": v["番剧"]}
+        CreateNode(m_graph, label_comic, attrs_comic)
+        for crt in v["角色"]:
+            label_charactor = "charactor"
+            attrs_charactor = {"name": crt["name"]}
+            CreateNode(m_graph, label_charactor, attrs_charactor)
+            ch_com_re = "出场"
+            res = CreateRelationship(m_graph, label_charactor, attrs_charactor,
+                               label_comic, attrs_comic, ch_com_re)
+            label_actor = "actor"
+            for actor in crt["actors"]:
+                attrs_actor = {"name" : actor}
+                CreateNode(m_graph, label_actor, attrs_actor)
+                at_ch_re = "配音"
+                pre_com_re = "参与制作"
+                res = CreateRelationship(m_graph, label_actor, attrs_actor,
+                                   label_charactor, attrs_charactor, at_ch_re)
+                res = CreateRelationship(m_graph, label_actor, attrs_actor,
+                                   label_comic, attrs_comic, pre_com_re)
+
+        for staff in v["工作人员"]:
+            label_staff = "staff"
+            attrs_staff = {"name":staff}
+            CreateNode(m_graph, label_staff, attrs_staff)
+            pre_com_re = "参与制作"
+            res = CreateRelationship(m_graph, label_staff, attrs_staff,
+                               label_comic, attrs_comic, pre_com_re)
+        i += 1
+        if i % 10 == 0:
+            print("turn {} finished".format(i))
+
 
 
 
@@ -76,3 +94,4 @@ def create_from_json(m_graph, json_path):
 # graph = Graph('http://localhost:7474', username='neo4j', password=my_password)
 # 打开数据库
 # create_from_csv(graph, './jojo_test.csv')
+# create_from_json(graph, './data/bangumi_simplify.json')
