@@ -65,6 +65,8 @@ def crawl_all(index, dest='data/bangumi_all.json'):
             waitlist.append(bangumi_subject_id)
     print("loaded {} subjects to waitlist".format(len(waitlist)))
 
+    FAILED_THRES = 3
+    failed_times = {}
     n_repeat = len(waitlist) * 2
     run_times = 0
     records = {}
@@ -80,8 +82,10 @@ def crawl_all(index, dest='data/bangumi_all.json'):
                 status = 'invalid'
         except:
             status = 'failed'
-            time.sleep(1)
-            waitlist.append(subject_id)
+            failed_times[subject_id] = failed_times.get(subject_id, 0) + 1
+            if failed_times[subject_id] < FAILED_THRES:
+                time.sleep(1)
+                waitlist.append(subject_id)
         print("try {} {}: {} crawled, {} remaining".format(run_times, status, len(records), len(waitlist)))
     
     fp = open(dest, 'w', encoding='utf-8')
