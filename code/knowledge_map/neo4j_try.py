@@ -51,7 +51,25 @@ def create_from_csv(m_graph, csv_path):
 
 
 def create_from_json(m_graph, json_path):
-    return None
+    with open(json_path, 'r', encoding="UTF-8") as fp:
+        loader = json.load(fp)
+    key_list = list(loader.keys())
+    for key in key_list:
+        now_dict = loader[key]
+        label_name = "番剧名"
+        for k, v in now_dict.item():
+            comic = ""
+            if k == "中文名":
+                for comic_name in v:
+                    CreateNode(m_graph, label_name, comic_name)
+                    comic = comic_name
+            else:
+                relation_name = "参与制作"
+                for in_name in v:
+                    CreateNode(m_graph, k, in_name)
+                    CreateRelationship(m_graph, label_name, comic,
+                                       k, in_name, relation_name)
+
 
 
 # my_password = ''                # do not upload your password
