@@ -45,18 +45,36 @@ def is_valid(subject):
 
 def get_subject(subject_id):
     """
-        根据主题 ID 获取 bangumi 信息
+        根据主题 ID 获取 bangumi 主题信息
         input:  
             - subject id (int / str)
         output: 
             - subject (dict) 参考 #APIS/data-sample/Bangumi/subject{{subject_id}}.json
     """
-    url = "https://cdn.jsdelivr.net/npm/anime-sachedule-search-data@0.1.106/dist/subject/{}.json".format(subject_id)
+    url = f"https://cdn.jsdelivr.net/npm/anime-sachedule-search-data@0.1.106/dist/subject/{subject_id}.json"
     res = requests.get(url)
     if res:
         data = json.loads(res.text)
     else:
         raise ValueError("invalid subject id")
+    return data
+
+
+def get_person(person_id):
+    """
+        根据人物 ID 获取对应人物信息
+        input:
+            - person id (int / str)
+        output:
+            - person (dict) 参考 #APID/data-sample/Bangumi/person{{person_id}}.json
+    """
+    person_id = int(person_id)
+    url = f"https://cdn.jsdelivr.net/gh/czy0729/Bangumi-Mono@master/person/{person_id//100}/{person_id}.json"
+    res = requests.get(url)
+    if res:
+        data = json.loads(res.text)
+    else:
+        raise ValueError("invalid person id")
     return data
 
 
