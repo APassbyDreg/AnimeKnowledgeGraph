@@ -13,7 +13,7 @@ def shortest_path_match(graph, name_1, attrib_1, attrib_2):
     """
     match_str = "MATCH (p:" + attrib_1 + \
                 "{name: '" + name_1 + "' })-[r]-(q:" + attrib_2 + ") RETURN q"
-    print(match_str)
+    #print(match_str)
     p1 = graph.run(match_str)
     p1 = list(p1)
     return p1
@@ -26,7 +26,7 @@ def recommend_path(graph, name_1, attrib_1, attrib_2, attrib_3):
     match_str = "MATCH (p:" + attrib_1 + \
                 "{name: '" + name_1 + "' })-[r]-(q:" + attrib_2 + \
                 ")-[t]-(w:" + attrib_3 + ") RETURN w"
-    print(match_str)
+    #print(match_str)
     p1 = graph.run(match_str)
     p1 = list(p1)
     return p1
@@ -50,7 +50,8 @@ def get_comic_list(json_path):
                     actor_list.append(actor)
     return comic_list, actor_list, charactor_list
 
-def Q_and_A():
+def Q_and_A(graph):
+    flag_list = ['番剧', '角色', '配音', '演员', '推荐', '配音演员']
     special_list = []
     comic_list, actor_list, charactor_list = get_comic_list("./data/bangumi_simplify.json")
     special_list.extend(comic_list)
@@ -58,10 +59,31 @@ def Q_and_A():
     special_list.extend(charactor_list)
     for word in special_list:
         jieba.suggest_freq(word, True)
-    question = input("年轻的孩子，用你的问题换取宅之力吧！")
+    while True:
+        question = input("年轻的孩子，用你的问题换取宅之力吧！")
+        if question == "没什么想问的了":
+            break
+        words = pseg.cut(question)
+        sentence_special_list = []
+        sentence_flag_list = []
+        for word, flag in words:
+            #print(word)
+            if word in special_list:
+                sentence_special_list.append(word)
+            elif word in flag_list:
+                sentence_flag_list.append(word)
+        if len(sentence_special_list) == 0:
+            print("抱歉，不知道您具体指什么")
+            continue
+        if len(sentence_flag_list) == 0:
+            print("您在说什么？？")
+            continue
+        for special_word in sentence_special_list:
+            if special_word in comic_list:
+                for flag_word in sentence_flag_list:
+                    if flag_word == "配音演员" or flag_word == "配音":
+                        return_list = shortest_path_match(graph, special_word,
+                                                          'comic', 'actor')
+                        print("您想了解的配音演员有", return_list)
 
-    words = pseg.cut(question)
-    for word, flag in words:
-        print(word)
-        print(flag)
 
