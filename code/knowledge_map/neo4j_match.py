@@ -1,6 +1,7 @@
 from py2neo import Node, Relationship, Graph, NodeMatcher, RelationshipMatcher
 import jieba.posseg as pseg
 import jieba
+import random
 import json
 
 #my_password = ''
@@ -51,12 +52,13 @@ def get_comic_list(json_path):
     return comic_list, actor_list, charactor_list
 
 def Q_and_A(graph):
-    flag_list = ['番剧', '角色', '配音', '演员', '推荐', '配音演员']
+    flag_list = ['番剧', '角色', '配音', '演员', '推荐', '配音演员', '登场人物', "喜欢"]
     special_list = []
     comic_list, actor_list, charactor_list = get_comic_list("./data/bangumi_simplify.json")
     special_list.extend(comic_list)
     special_list.extend(actor_list)
     special_list.extend(charactor_list)
+    special_list.extend(flag_list)
     for word in special_list:
         jieba.suggest_freq(word, True)
     while True:
@@ -66,10 +68,19 @@ def Q_and_A(graph):
         words = pseg.cut(question)
         sentence_special_list = []
         sentence_flag_list = []
+        sentence_comic_list = []
+        sentence_actor_list = []
+        sentence_charactor_list = []
         for word, flag in words:
             #print(word)
             if word in special_list:
                 sentence_special_list.append(word)
+            if word in comic_list:
+                sentence_comic_list.append(word)
+            if word in actor_list:
+                sentence_actor_list.append(word)
+            if word in charactor_list:
+                sentence_charactor_list.append(word)
             elif word in flag_list:
                 sentence_flag_list.append(word)
         if len(sentence_special_list) == 0:
@@ -80,10 +91,19 @@ def Q_and_A(graph):
             continue
         for special_word in sentence_special_list:
             if special_word in comic_list:
-                for flag_word in sentence_flag_list:
-                    if flag_word == "配音演员" or flag_word == "配音":
-                        return_list = shortest_path_match(graph, special_word,
-                                                          'comic', 'actor')
-                        print("您想了解的配音演员有", return_list)
+                if "配音演员" in sentence_flag_list or "声优" in sentence_flag_list or \
+                            "配音" in sentence_flag_list and len(sentence_actor_list) == 0:
+                    return_list = shortest_path_match(graph, special_word,
+                                                        'comic', 'actor')
+                    print("您想了解的配音演员有", return_list)
+                    if "喜欢" in sentence_flag_list and "推荐" in sentence_flag_list:
+                        return_list = recommend_path(graph, special_word, 'comic', 'actor', 'comic')
+                        if len(return_list) > 10:
+                            return_list = random.sample(return_list, 10)
+                        print("推测您可能喜欢以下番剧", return_list)
+                if "角色" in sentence_flag_list or "登场人物" in sentence_flag_list:
+                    return_list = shortest_path_match(graph, special_word,
+                                                        'comic', 'charactor')
+                    print(special_word + "的主要人物包括了", return_list)
 
 
