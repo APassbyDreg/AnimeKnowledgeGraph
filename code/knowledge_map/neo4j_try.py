@@ -78,7 +78,7 @@ def create_from_json(m_graph, json_path):
 
         for staff in v["工作人员"]:
             label_staff = "staff"
-            attrs_staff = {"name":staff}
+            attrs_staff = {"name": staff['name'], "job": staff['job']}
             CreateNode(m_graph, label_staff, attrs_staff)
             pre_com_re = "参与制作"
             res = CreateRelationship(m_graph, label_staff, attrs_staff,
