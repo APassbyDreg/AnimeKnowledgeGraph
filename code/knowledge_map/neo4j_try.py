@@ -63,14 +63,14 @@ def create_from_json(m_graph, json_path):
         CreateNode(m_graph, label_comic, attrs_comic)
         for crt in v["角色"]:
             label_charactor = "character"
-            attrs_charactor = {"name": crt["name"]}
+            attrs_charactor = {"name": crt["name"], "source": v["番剧"]}
             CreateNode(m_graph, label_charactor, attrs_charactor)
             ch_com_re = "出场"
             res = CreateRelationship(m_graph, label_charactor, attrs_charactor,
                                label_comic, attrs_comic, ch_com_re)
             label_actor = "staff"
             for actor in crt["actors"]:
-                attrs_actor = {"name" : actor}
+                attrs_actor = {"name": actor}
                 CreateNode(m_graph, label_actor, attrs_actor)
                 at_ch_re = "声优"
                 pre_com_re = "参与配音"
