@@ -9,6 +9,8 @@ Resources:
         Handler: index.handler     
         Runtime: python3
         CodeUri: './'
+        MemorySize: 256
+        Timeout: 16
       Events:
         http-test:
           Type: HTTP
