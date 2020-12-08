@@ -3,10 +3,44 @@
     <head>
         <title>Anime QA</title>
         <link rel="icon" href="imgs/QA_icon.svg">
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <!--        <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+        <!--        <script src="https://unpkg.com/vue-router"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.0/vue-resource.js"></script>
+        <script src="https://unpkg.com/element-ui@2.6.1/lib/index.js"></script>
+        
+        
+        <script src="https://unpkg.com/lodash@4.16.0"></script>
+        <script src="https://unpkg.com/http-vue-loader"></script>
     </head>
 
 
     <body>
-        this site is under construction
+        <div id="main">
+            <input v-model="question">
+            <button @click="ask">ask</button>
+        </div>
+
+        <script>
+            let vm = new Vue({
+                el: "#main",
+                data: {
+                    question: "",
+                    dialogs: []
+                },
+                methods: {
+                    ask: function() {
+                        let url = "http://api.apassbydreg.work/anime-qa?question=" + this.question;
+                        this.$http.get(url).then(res => {
+                            alert(res.body);
+                        })
+                    }
+                },
+                mounted: function () {
+
+                }
+            })
+        </script>
     </body>
 </html>
