@@ -20,13 +20,32 @@
 
         <style>
             body {
-                background-color: #fbfbfb;
+                background-color: white;
+            }
+            h1 {
+                font-size: 4.5vh;
+            }
+            #bg {
+                z-index: -10;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 135vw;
+                height: 100vh;
+                opacity: 0.5;
+                background-image: url("./imgs/BG.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #main {
+                font-size: 2.1vh;
             }
             #main-container {
                 background-color: white;
                 border-radius: 1em;
-                box-shadow: #bbbbbb 0.2em 0.2em 0.5em;
-                max-width: 600px; 
+                box-shadow: rgba(0, 0, 0, 0.25) 0.2em 0.2em 0.5em;
+                max-width: 900px; 
                 padding: 1.2em;
                 margin: 2em;
             }
@@ -35,9 +54,20 @@
                 font-weight: bold;
             }
             #tips {
+                font-size: 1.8vh;
                 text-align: center;
                 margin: 1em;
                 color: #008568;
+            }
+            #submit-btn {
+                font-size: 2.1vh;
+            }
+            #q-input {
+                font-size: 2.1vh;
+            }
+            #loading-icon {
+                height: 2.4vh;
+                width: 2.4vh;
             }
             .result {
                 margin-top: 1em;
@@ -46,6 +76,9 @@
                 background-color: #e8f2ff;
             }
             .tooltip div {
+                font-size: 1.5vh;
+                max-width: 18vh;
+                width: 18vh;
                 text-align:left;
             }
             .tooltip.show {
@@ -57,6 +90,7 @@
 
 
     <body>
+        <div id="bg"></div>
         <div id="main" style="width: 100vw; height: 100vh;" class="d-flex align-content-center flex-wrap justify-content-center align-self-center">
             <div class="container-sm" id="main-container">
                 <h1 id="heading">二刺螈QA</h1>
@@ -68,11 +102,11 @@
                     </span>
                 </div>
                 <div class="form-group">
-                    <input v-model="question" class="form-control">
+                    <input v-model="question" class="form-control" id="q-input">
                 </div>
-                <button @click="ask" class="btn btn-primary" style="width: 100%;">
+                <button @click="ask" class="btn btn-primary" style="width: 100%;" id="submit-btn">
                     <span v-if="loading">
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="loading-icon"></span>
                         {{loading_hint}}
                     </span>
                     <span v-else>
@@ -140,9 +174,6 @@
             $(document).ready(function() {
                 $("body").tooltip({ selector: '[data-toggle=tooltip]' });
             });
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
         </script>
     </body>
 </html>
