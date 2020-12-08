@@ -12,9 +12,25 @@ graph = Graph('http://121.4.39.249:7474', username='neo4j', password='neo4jadmin
 
 # To enable the initializer feature (https://help.aliyun.com/document_detail/158208.html)
 # please implement the initializer function as below：
-# def initializer(context):
-#    logger = logging.getLogger()  
-#    logger.info('initializing')
+def initializer(context):
+    flag_list = ['番剧', '角色', '配音', '演员', '推荐', '配音演员', '登场人物', "喜欢",
+                 "番", "声优", "音乐", "剧情", "画风"]
+    logger = logging.getLogger()  
+    logger.info('initializing')
+    special_list = []
+    with open("./bangumi_inform_collect.json", "r", encoding="UTF-8") as fp:
+        bangumi_loader = json.load(fp)
+    comic_list = bangumi_loader["bangumi_list"]
+    staff_list = bangumi_loader["staff_list"]
+    actor_list = bangumi_loader["actor_list"]
+    charactor_list = bangumi_loader["character_list"]
+    special_list.extend(comic_list)
+    special_list.extend(actor_list)
+    special_list.extend(charactor_list)
+    special_list.extend(staff_list)
+    special_list.extend(flag_list)
+    for word in special_list:
+        jieba.suggest_freq(word, True)
 
 def handler(environ, start_response):
     context = environ['fc.context']
@@ -57,8 +73,6 @@ def QA(question):
     special_list.extend(charactor_list)
     special_list.extend(staff_list)
     special_list.extend(flag_list)
-    for word in special_list:
-        jieba.suggest_freq(word, True)
     words = pseg.cut(question)
     sentence_special_list = []
     sentence_flag_list = []
@@ -171,6 +185,6 @@ def recommend_path(graph, name_1, label_1, relation_1, label_2, relation_2, labe
     return p1
 
 
-test = True
+test = False
 if test:
     print(QA("花泽香菜配音过什么角色"))
