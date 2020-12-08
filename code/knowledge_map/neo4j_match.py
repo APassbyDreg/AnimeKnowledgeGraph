@@ -199,9 +199,9 @@ def Q_and_A_new(graph, question):
         elif word in flag_list:
             sentence_flag_list.append(word)
     if len(sentence_special_list) == 0:
-        print("抱歉，不知道您具体指什么")
+        return "抱歉，不知道您具体指什么"
     if len(sentence_flag_list) == 0:
-        print("您在说什么？？")
+        return "您在说什么？？"
     for special_word in sentence_special_list:
         if special_word in comic_list:
             if "配音演员" in sentence_flag_list or "声优" in sentence_flag_list or \
@@ -210,34 +210,34 @@ def Q_and_A_new(graph, question):
                 return_list = recommend_path(graph, special_word,
                                              'bangumi', '出场', 'character', '声优', 'staff')
                 # return_list = shortest_path_match(graph, special_word, "bangumi", "参与配音", "staff")
-                print("对于" + special_word + "您可能想了解的配音演员有", return_list)
+                return "对于" + special_word + "您可能想了解的配音演员有" + str(return_list)
 
             if "角色" in sentence_flag_list or "登场人物" in sentence_flag_list and \
                     len(sentence_charactor_list) == 0:
                 return_list = shortest_path_match(graph, special_word,
                                                   'bangumi', '出场', 'character')
-                print(special_word + "的主要人物包括了", return_list)
+                return special_word + "的主要人物包括了" + str(return_list)
 
             if "音乐" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与音乐制作', 'staff', '参与音乐制作', 'bangumi')
                 if len(return_list) > 10:
                     return_list = random.sample(return_list, 10)
-                print("推测您可能喜欢以下番剧", return_list)
+                return "推测您可能喜欢以下番剧" + str(return_list)
 
             if "画风" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与原画制作', 'staff', '参与原画制作', 'bangumi')
                 if len(return_list) > 10:
                     return_list = random.sample(return_list, 10)
-                print("推测您可能喜欢以下番剧", return_list)
+                return "推测您可能喜欢以下番剧" + str(return_list)
 
             if "剧情" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与内容制作', 'staff', '参与内容制作', 'bangumi')
                 if len(return_list) > 10:
                     return_list = random.sample(return_list, 10)
-                print("推测您可能喜欢以下番剧", return_list)
+                return "推测您可能喜欢以下番剧" + str(return_list)
 
         elif special_word in charactor_list:
             if "配音演员" in sentence_flag_list or "声优" in sentence_flag_list or \
@@ -246,20 +246,20 @@ def Q_and_A_new(graph, question):
                                                   'character', '声优', 'staff')
                 # print(special_word + "的配音演员是", return_list)
                 return_list = list(set(return_list))
-                print(special_word + "的配音演员是", return_list)
+                return special_word + "的配音演员是" + str(return_list)
             if "番剧" in sentence_flag_list or "番" in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'character', '出场', 'bangumi')
-                print(special_word + "出场于", return_list)
+                return special_word + "出场于" + str(return_list)
         elif special_word in actor_list:
             if "配音" in sentence_flag_list and '角色' in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'staff', '声优', 'character')
                 if len(return_list) > 10:
                     return_list = random.sample(return_list, 10)
-                print(special_word + "配音了", return_list)
+                return special_word + "配音了" + str(return_list)
             if "番剧" in sentence_flag_list or "番" in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'staff', '参与配音', 'bangumi')
-                print(special_word + "参与配音" + str(return_list))
+                return special_word + "参与配音" + str(return_list)
 
