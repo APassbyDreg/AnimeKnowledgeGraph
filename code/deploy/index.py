@@ -12,9 +12,9 @@ graph = Graph('http://121.4.39.249:7474', username='neo4j', password='neo4jadmin
 
 # To enable the initializer feature (https://help.aliyun.com/document_detail/158208.html)
 # please implement the initializer function as below：
-def initializer(context):
-   logger = logging.getLogger()  
-   logger.info('initializing')
+# def initializer(context):
+#    logger = logging.getLogger()  
+#    logger.info('initializing')
 
 def handler(environ, start_response):
     context = environ['fc.context']
@@ -25,10 +25,12 @@ def handler(environ, start_response):
     logging.info(f"params OK: {params}")
     
     # QA - main
+    res = {"success": False}
     if params.get('question', None) is not None:
-        res = QA(params['question'][0])
+        res["result"] = QA(params['question'][0])
+        res["success"] = True
     else:
-        res = "invalid question param"
+        res["result"] = "invalid question param"
     logging.info(f"res OK {res}")
 
     # response
