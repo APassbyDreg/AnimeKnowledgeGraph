@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Anime QA</title>
+        <title>Anime Q&A</title>
         <link rel="icon" href="imgs/QA_icon.svg">
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -24,19 +24,21 @@
             }
             h1 {
                 font-size: 4.5vh;
+                letter-spacing: 3px;
             }
             #bg {
                 z-index: -10;
                 position: fixed;
-                left: 0;
-                top: 0;
+                left: -5px;
+                top: -5px;
                 width: 135vw;
-                height: 100vh;
+                height: 105vh;
                 opacity: 0.5;
                 background-image: url("./imgs/BG.png");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
+                filter: blur(4px);
             }
             #main {
                 font-size: 2.1vh;
@@ -93,7 +95,7 @@
         <div id="bg"></div>
         <div id="main" style="width: 100vw; height: 100vh;" class="d-flex align-content-center flex-wrap justify-content-center align-self-center">
             <div class="container-sm" id="main-container">
-                <h1 id="heading">二刺螈QA</h1>
+                <h1 id="heading">二刺螈Q&A</h1>
                 <div id="tips">
                     我能这么问 → 
                     <span style="cursor: pointer;" :title="tip"
