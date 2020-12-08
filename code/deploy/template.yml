@@ -7,11 +7,11 @@ Resources:
       Type: 'Aliyun::Serverless::Function'   
       Properties:     
         Handler: index.handler     
-        Runtime: python3     
+        Runtime: python3
         CodeUri: './'
       Events:
         http-test:
           Type: HTTP
           Properties:
             AuthType: ANONYMOUS
-            Methods: ['GET', 'POST', 'PUT']
+            Methods: ['GET', 'POST']

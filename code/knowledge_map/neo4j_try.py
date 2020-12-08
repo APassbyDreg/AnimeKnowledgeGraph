@@ -102,4 +102,4 @@ def create_from_json(m_graph, json_path):
 graph = Graph('http://121.4.39.249:7474', username='neo4j', password='neo4jadmin')
 # 打开数据库
 # create_from_csv(graph, './jojo_test.csv')
-create_from_json(graph, './data/bangumi_simplify.json')
+# create_from_json(graph, './data/bangumi_simplify.json')
