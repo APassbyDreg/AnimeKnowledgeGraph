@@ -102,34 +102,34 @@ def QA(question):
                 return_list = special_deal_for_actor(
                     graph, special_word, "bangumi", "staff")
                 # return_list = shortest_path_match(graph, special_word, "bangumi", "参与配音", "staff")
-                return "对于" + special_word + "您可能想了解的配音演员有:" + str(return_list)
+                return "对于" + special_word + "您可能想了解的配音演员有：" + str(return_list)
 
             if "角色" in sentence_flag_list or "登场人物" in sentence_flag_list and \
                     len(sentence_charactor_list) == 0:
                 return_list = shortest_path_match(graph, special_word,
                                                   'bangumi', '出场', 'character')
-                return special_word + "的主要人物包括了:" + str(return_list)
+                return special_word + "的主要人物包括了：" + str(return_list)
 
             if "音乐" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与音乐制作', 'staff', '参与音乐制作', 'bangumi')
                 # if len(return_list) > 10:
                 #     return_list = random.sample(return_list, 10)
-                return "推测您可能喜欢以下番剧:" + str(return_list)
+                return "推测您可能喜欢以下番剧：" + str(return_list)
 
             if "画风" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与原画制作', 'staff', '参与原画制作', 'bangumi')
                 # if len(return_list) > 10:
                 #     return_list = random.sample(return_list, 10)
-                return "推测您可能喜欢以下番剧:" + str(return_list)
+                return "推测您可能喜欢以下番剧：" + str(return_list)
 
             if "剧情" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与内容制作', 'staff', '参与内容制作', 'bangumi')
                 # if len(return_list) > 10:
                 #     return_list = random.sample(return_list, 10)
-                return "推测您可能喜欢以下番剧:" + str(return_list)
+                return "推测您可能喜欢以下番剧：" + str(return_list)
 
         elif special_word in charactor_list:
             if "配音演员" in sentence_flag_list or "声优" in sentence_flag_list or \
@@ -138,22 +138,22 @@ def QA(question):
                                                   'character', '声优', 'staff')
                 # print(special_word + "的配音演员是", return_list)
                 # return_list = list(set(return_list))
-                return special_word + "的配音演员有:" + str(return_list)
+                return special_word + "的配音演员有：" + str(return_list)
             if "番剧" in sentence_flag_list or "番" in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'character', '出场', 'bangumi')
-                return special_word + "出场于" + str(return_list)
+                return special_word + "出场于：" + str(return_list)
         elif special_word in actor_list:
             if "配音" in sentence_flag_list and '角色' in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'staff', '声优', 'character')
                 # if len(return_list) > 10:
                 #     return_list = random.sample(return_list, 10)
-                return special_word + "配音了这些角色:" + str(return_list)
+                return special_word + "配音了这些角色：" + str(return_list)
             if "番剧" in sentence_flag_list or "番" in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'staff', '参与配音', 'bangumi')
-                return special_word + "参与配音的番剧有:" + str(return_list)
+                return special_word + "参与配音的番剧有：" + str(return_list)
 
 
 def shortest_path_match(graph, name_1, label_1, relation, label_2):
