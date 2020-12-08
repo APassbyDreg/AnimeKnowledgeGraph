@@ -34,7 +34,12 @@
                     ask: function() {
                         let url = "https://1354839170291685.ap-northeast-1.fc.aliyuncs.com/2016-08-15/proxy/anime-knowledge-graph/anime-qa/?question=" + this.question;
                         this.$http.get(url).then(res => {
-                            alert(res.body);
+                            if (res.body['success']) {
+                                alert(res.body["result"])
+                            }
+                            else {
+                                alert(res.body["result"])
+                            }
                         })
                     }
                 },
