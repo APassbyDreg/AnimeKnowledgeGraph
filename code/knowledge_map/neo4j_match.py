@@ -32,6 +32,15 @@ def recommend_path(graph, name_1, label_1, relation_1, label_2, relation_2, labe
     p1 = list(p1)
     return p1
 
+def special_deal_for_actor(graph, name_1, label_1, label_2):
+    match_str = "MATCH (p:" + label_1 + \
+                "{name: '" + name_1 + "' })-[r:出场]-(q:character)-[t:声优]-(w:" \
+                + label_2 + ")-[v:参与配音]-(s:" + label_1 + "{name: '" + name_1 + "' }) RETURN w"
+    # print(match_str)
+    p1 = graph.run(match_str)
+    p1 = list(p1)
+    return p1
+
 def get_comic_list(json_path):
     """
     获得全部comic的名字以及其中声优和charactor的名字
@@ -207,8 +216,9 @@ def Q_and_A_new(graph, question):
             if "配音演员" in sentence_flag_list or "声优" in sentence_flag_list or \
                     "配音" in sentence_flag_list and len(sentence_charactor_list) == 0 and \
                     len(sentence_actor_list) == 0:
-                return_list = recommend_path(graph, special_word,
-                                             'bangumi', '出场', 'character', '声优', 'staff')
+                # return_list = recommend_path(graph, special_word,
+                #                              'bangumi', '出场', 'character', '声优', 'staff')
+                return_list = special_deal_for_actor(graph, special_word, "bangumi", "staff")
                 # return_list = shortest_path_match(graph, special_word, "bangumi", "参与配音", "staff")
                 return "对于" + special_word + "您可能想了解的配音演员有" + str(return_list)
 

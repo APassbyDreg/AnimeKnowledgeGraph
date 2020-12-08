@@ -57,6 +57,7 @@ def create_from_csv(m_graph, csv_path):
 
 def create_from_json(m_graph, json_path):
     ClearDB(m_graph)
+    character_dict = {}
     with open("./edge_classes.json", 'r', encoding="UTF-8") as fp:
         job_class_loader = json.load(fp)
         job_class_loader = job_class_loader["staff"]["bangumi"]
@@ -68,7 +69,7 @@ def create_from_json(m_graph, json_path):
         CreateNode(m_graph, label_comic, attrs_comic)
         for crt in v["角色"]:
             label_charactor = "character"
-            attrs_charactor = {"name": crt["name"], "source": v["番剧"]}
+            attrs_charactor = {"name": crt["name"]}
             CreateNode(m_graph, label_charactor, attrs_charactor)
             ch_com_re = "出场"
             res = CreateRelationship(m_graph, label_charactor, attrs_charactor,
