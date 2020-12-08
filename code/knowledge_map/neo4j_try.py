@@ -1,6 +1,11 @@
 from py2neo import Node, Relationship, Graph, NodeMatcher, RelationshipMatcher
 import csv
 import json
+from tqdm import tqdm
+
+def ClearDB(graph):
+    graph.run("MATCH (n)")
+    graph.run("DETACH DELETE n")
 
 def CreateNode(m_graph, m_label, m_attrs):
     matcher = NodeMatcher(m_graph)
@@ -51,13 +56,13 @@ def create_from_csv(m_graph, csv_path):
 
 
 def create_from_json(m_graph, json_path):
+    ClearDB(m_graph)
     with open("./edge_classes.json", 'r', encoding="UTF-8") as fp:
         job_class_loader = json.load(fp)
         job_class_loader = job_class_loader["staff"]["bangumi"]
     with open(json_path, 'r', encoding="UTF-8") as fp:
         loader = json.load(fp)
-    i = 0
-    for k, v in loader.items():
+    for k, v in tqdm(loader.items()):
         label_comic = "bangumi"
         attrs_comic = {"name": v["番剧"]}
         CreateNode(m_graph, label_comic, attrs_comic)
@@ -90,15 +95,11 @@ def create_from_json(m_graph, json_path):
                         pre_com_re = key
                 res = CreateRelationship(m_graph, label_staff, attrs_staff,
                                label_comic, attrs_comic, pre_com_re)
-        i += 1
-        if i % 10 == 0:
-            print("turn {} finished".format(i))
 
 
 
 
-# my_password = ''                # do not upload your password
-# graph = Graph('http://localhost:7474', username='neo4j', password=my_password)
+graph = Graph('http://121.4.39.249:7474', username='neo4j', password='neo4jadmin')
 # 打开数据库
 # create_from_csv(graph, './jojo_test.csv')
-# create_from_json(graph, './data/bangumi_simplify.json')
+create_from_json(graph, './data/bangumi_simplify.json')
