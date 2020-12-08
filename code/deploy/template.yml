@@ -1,0 +1,17 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Resources:
+  anime-knowledge-graph:  
+    Type: 'Aliyun::Serverless::Service' 
+    anime-qa:    
+      Type: 'Aliyun::Serverless::Function'   
+      Properties:     
+        Handler: index.handler     
+        Runtime: python3     
+        CodeUri: './'
+      Events:
+        http-test:
+          Type: HTTP
+          Properties:
+            AuthType: ANONYMOUS
+            Methods: ['GET', 'POST', 'PUT']
