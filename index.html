@@ -23,6 +23,7 @@
         </div>
 
         <script>
+            Vue.http.headers.common['Access-Control-Allow-Origin'] = '*';
             let vm = new Vue({
                 el: "#main",
                 data: {
