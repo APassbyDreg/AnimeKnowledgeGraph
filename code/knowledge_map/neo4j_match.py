@@ -163,7 +163,6 @@ def get_comic_list(json_path):
 #                                                       'staff', '参与配音', 'bangumi')
 #                     print(special_word + "参与配音", return_list)
 
-
 def Q_and_A_new(graph, question):
     flag_list = ['番剧', '角色', '配音', '演员', '推荐', '配音演员', '登场人物', "喜欢",
                  "番", "声优", "音乐", "剧情", "画风"]
