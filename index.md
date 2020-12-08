@@ -1,1 +1,0 @@
-[go here](https://apassbydreg.github.io/AnimeKnowledgeGraph/index.html)
