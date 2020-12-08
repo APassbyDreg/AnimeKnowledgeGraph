@@ -156,11 +156,11 @@ def Q_and_A(graph):
                                                       'staff', '参与配音', 'bangumi')
                     print(special_word + "参与配音", return_list)
 
-def Q_and_A_new(graph, question):
+def Q_and_A_new(graph, question, comic_list, staff_list, actor_list, charactor_list):
     flag_list = ['番剧', '角色', '配音', '演员', '推荐', '配音演员', '登场人物', "喜欢",
                  "番", "声优", "音乐", "剧情", "画风"]
     special_list = []
-    comic_list, staff_list, actor_list, charactor_list = get_comic_list("./data/bangumi_simplify.json")
+    #comic_list, staff_list, actor_list, charactor_list = get_comic_list("./data/bangumi_simplify.json")
     special_list.extend(comic_list)
     special_list.extend(actor_list)
     special_list.extend(charactor_list)
