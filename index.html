@@ -71,17 +71,32 @@
                 height: 2.4vh;
                 width: 2.4vh;
             }
+            #credits {
+                position: fixed;
+                top: 90vh;
+                left: calc(50vw - 10em);
+                cursor: pointer;
+                width: 20em;
+                text-align: center;
+                font-size: 1.2vh;
+                opacity: 0.4;
+                transition: all ease 0.8s;
+            }
+            #credits:hover {
+                opacity: 0.6;
+            }
             .result {
                 margin-top: 1em;
             }
             .result-content {
                 background-color: #e8f2ff;
             }
-            .tooltip div {
+            .tooltip-inner {
                 font-size: 1.5vh;
-                max-width: 18vh;
-                width: 18vh;
+                max-width: 63vw;
+                width: 27em;
                 text-align:left;
+                padding: 0.6em;
             }
             .tooltip.show {
                 opacity: 0.8!important;
@@ -93,13 +108,14 @@
 
     <body>
         <div id="bg"></div>
+        <div id="credits">开发者：贺梓淇、曾博涵、王文辉</div>
         <div id="main" style="width: 100vw; height: 100vh;" class="d-flex align-content-center flex-wrap justify-content-center align-self-center">
             <div class="container-sm" id="main-container">
                 <h1 id="heading">二刺螈Q&A</h1>
                 <div id="tips">
                     我能这么问 → 
                     <span style="cursor: pointer;" :title="tip"
-                          data-toggle="tooltip" data-placement="top" data-html="true">
+                          data-toggle="tooltip" data-placement="bottom" data-html="true">
                         ✔
                     </span>
                 </div>
@@ -135,7 +151,7 @@
                 data: {
                     question: "",
                     answer: "",
-                    tip: "<div style='text-align:left'>【番剧】的（配音演员/角色）都有谁</br>【声优】配音过什么（番剧/角色）</br>【角色】是什么番剧的角色</br>【角色】的配音演员是谁</br>【番剧】的（画风/剧情/音乐）我很喜欢，有什么推荐</div>",
+                    tip: "<div style='text-align:left'>【番剧】的（配音演员/角色）都有哪些</br>【声优】担当过什么（番剧/角色）的配音</br>【角色】是哪个番剧里的角色</br>【角色】的配音演员是谁</br>【番剧】的（画风/剧情/音乐）我很喜欢，有什么推荐吗</div>",
                     loading_hint: "在想了，你急个🔨",
                     submit_text: "👴很好奇！",
                     loading: false,
