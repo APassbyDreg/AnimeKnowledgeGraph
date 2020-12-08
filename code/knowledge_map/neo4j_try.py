@@ -51,26 +51,29 @@ def create_from_csv(m_graph, csv_path):
 
 
 def create_from_json(m_graph, json_path):
+    with open("./edge_classes.json", 'r', encoding="UTF-8") as fp:
+        job_class_loader = json.load(fp)
+        job_class_loader = job_class_loader["staff"]["bangumi"]
     with open(json_path, 'r', encoding="UTF-8") as fp:
         loader = json.load(fp)
     i = 0
     for k, v in loader.items():
-        label_comic = "comic"
+        label_comic = "bangumi"
         attrs_comic = {"name": v["番剧"]}
         CreateNode(m_graph, label_comic, attrs_comic)
         for crt in v["角色"]:
-            label_charactor = "charactor"
-            attrs_charactor = {"name": crt["name"]}
+            label_charactor = "character"
+            attrs_charactor = {"name": crt["name"], "source": v["番剧"]}
             CreateNode(m_graph, label_charactor, attrs_charactor)
             ch_com_re = "出场"
             res = CreateRelationship(m_graph, label_charactor, attrs_charactor,
                                label_comic, attrs_comic, ch_com_re)
-            label_actor = "actor"
+            label_actor = "staff"
             for actor in crt["actors"]:
-                attrs_actor = {"name" : actor}
+                attrs_actor = {"name": actor}
                 CreateNode(m_graph, label_actor, attrs_actor)
-                at_ch_re = "配音"
-                pre_com_re = "参与制作"
+                at_ch_re = "声优"
+                pre_com_re = "参与配音"
                 res = CreateRelationship(m_graph, label_actor, attrs_actor,
                                    label_charactor, attrs_charactor, at_ch_re)
                 res = CreateRelationship(m_graph, label_actor, attrs_actor,
@@ -78,10 +81,14 @@ def create_from_json(m_graph, json_path):
 
         for staff in v["工作人员"]:
             label_staff = "staff"
-            attrs_staff = {"name":staff}
+            attrs_staff = {"name": staff['name']}
             CreateNode(m_graph, label_staff, attrs_staff)
-            pre_com_re = "参与制作"
-            res = CreateRelationship(m_graph, label_staff, attrs_staff,
+            job_list = staff['job']
+            for job in job_list:
+                for key, value in job_class_loader.items():
+                    if job in value:
+                        pre_com_re = key
+                res = CreateRelationship(m_graph, label_staff, attrs_staff,
                                label_comic, attrs_comic, pre_com_re)
         i += 1
         if i % 10 == 0:
