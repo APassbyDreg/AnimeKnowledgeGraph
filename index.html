@@ -14,7 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.0/vue-resource.js"></script>
         <script src="https://unpkg.com/element-ui@2.6.1/lib/index.js"></script>
         <script src="https://unpkg.com/lodash@4.16.0"></script>
-        <script src="https://unpkg.com/http-vue-loader"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
@@ -157,6 +157,19 @@
                     loading: false,
                     ask_cnt: 0
                 },
+                created: function () {
+                    // `_.debounce` 是一个通过 Lodash 限制操作频率的函数。
+                    // 在这个例子中，我们希望限制访问 yesno.wtf/api 的频率
+                    // AJAX 请求直到用户输入完毕才会发出。想要了解更多关于
+                    // `_.debounce` 函数 (及其近亲 `_.throttle`) 的知识，
+                    // 请参考：https://lodash.com/docs#debounce
+                    this.debouncedGetAnswer = _.debounce(() => {
+                        $('.collapse').collapse("hide");
+                        this.loading = true;
+                        // wait till collapsed
+                        setTimeout(() => { this.get_ans(); }, 250);
+                    }, 500)
+                },
                 methods: {
                     ask: function() {
                         this.ask_cnt += 1;
@@ -165,12 +178,13 @@
                             this.submit_text = "👴就是很好奇！";
                         }
 
-                        let url = "https://1354839170291685.ap-northeast-1.fc.aliyuncs.com/2016-08-15/proxy/anime-knowledge-graph/anime-qa/?question=" + encodeURIComponent(this.question);
-                        $('.collapse').collapse("hide");
-                        this.loading = true;
-                        this.$http.get(url).then(res => {
+                        this.debouncedGetAnswer();
+                    },
+                    get_ans: function () {
+                        let url_jp = "https://1354839170291685.ap-northeast-1.fc.aliyuncs.com/2016-08-15/proxy/anime-knowledge-graph/anime-qa/?question=";
+                        let url_cn = "https://1354839170291685.cn-beijing.fc.aliyuncs.com/2016-08-15/proxy/anime-knowledge-graph/anime-qa/?question="
+                        this.$http.get(url_cn + encodeURIComponent(this.question)).then(res => {
                             if (res.body['success']) {
-                                console.log("success");
                                 this.answer = res.body["result"];
                                 $('.collapse').collapse("show");
                             }
@@ -178,14 +192,24 @@
                                 alert(res.body["result"]);
                             }
                             this.loading = false;
-                        }).except(e => {
-                            this.loading = false;
-                            alert(e.message);
+                        }, res => {
+                            console.log("failed to connect to cn api, trying jp api...")
+                            this.$http.get(url_jp + encodeURIComponent(this.question)).then(res => {
+                                if (res.body['success']) {
+                                    console.log("success");
+                                    this.answer = res.body["result"];
+                                    $('.collapse').collapse("show");
+                                }
+                                else {
+                                    alert(res.body["result"]);
+                                }
+                                this.loading = false;
+                            }, res => {
+                                this.loading = false;
+                                alert("error connection: status=" + res.status);
+                            })
                         })
-                    }
-                },
-                mounted: function () {
-
+                    },
                 }
             })
 
