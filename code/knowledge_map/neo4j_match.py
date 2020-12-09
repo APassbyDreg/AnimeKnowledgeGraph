@@ -261,7 +261,7 @@ def Q_and_A_new(graph, question):
                 #     return_list = random.sample(return_list, 10)
                 return "推测您可能喜欢以下番剧:" + str(return_list)
 
-        elif special_word in charactor_list:
+        if special_word in charactor_list:
             if "配音演员" in sentence_flag_list or "声优" in sentence_flag_list or \
                     "配音" in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
@@ -273,7 +273,8 @@ def Q_and_A_new(graph, question):
                 return_list = shortest_path_match(graph, special_word,
                                                   'character', '出场', 'bangumi')
                 return special_word + "出场于" + str(return_list)
-        elif special_word in actor_list:
+                
+        if special_word in actor_list:
             if "配音" in sentence_flag_list and '角色' in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'staff', '声优', 'character')
