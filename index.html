@@ -27,6 +27,12 @@
                 font-size: 4.5vh;
                 letter-spacing: 3px;
             }
+            a {
+                transition: all ease 0.3s;
+            }
+            a:hover {
+                text-decoration: none;
+            }
             #bg {
                 z-index: -10;
                 position: fixed;
@@ -47,10 +53,15 @@
             #main-container {
                 background-color: white;
                 border-radius: 1em;
-                box-shadow: rgba(0, 0, 0, 0.25) 0.2em 0.2em 0.5em;
+                box-shadow: rgba(0, 0, 0, 0.2) 0.2em 0.2em 0.5em;
                 max-width: 900px; 
                 padding: 1.2em;
                 margin: 2em;
+                transition: all ease 0.5s;
+            }
+            #main-container:hover {
+                transform: translateY(-10px);
+                box-shadow: rgba(0, 0, 0, 0.3) 0.2em 0.1em 0.5em;
             }
             #heading {
                 text-align: center; 
@@ -76,15 +87,14 @@
                 position: fixed;
                 top: 90vh;
                 left: calc(50vw - 10em);
-                cursor: pointer;
-                width: 20em;
+                width: 30em;
                 text-align: center;
                 font-size: 1.2vh;
-                opacity: 0.4;
+                opacity: 0.5;
                 transition: all ease 0.8s;
             }
             #credits:hover {
-                opacity: 0.6;
+                opacity: 0.75;
             }
             .result {
                 margin-top: 1em;
@@ -109,7 +119,10 @@
 
     <body>
         <div id="bg"></div>
-        <div id="credits">开发者：贺梓淇、曾博涵、王文辉</div>
+        <div id="credits">
+            <div>开发者：贺梓淇、曾博涵、王文辉</div>
+            <div><a href="https://github.com/APassbyDreg/AnimeKnowledgeGraph">[Source on GitHub]</a></div>
+        </div>
         <div id="main" style="width: 100vw; height: 100vh;" class="d-flex align-content-center flex-wrap justify-content-center align-self-center">
             <div class="container-sm" id="main-container">
                 <h1 id="heading">二刺螈Q&A</h1>
