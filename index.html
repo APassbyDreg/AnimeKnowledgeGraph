@@ -116,8 +116,9 @@
                 <div id="tips">
                     我能这么问 → 
                     <span style="cursor: pointer;" :title="tip"
+                          :style="is_mobile ? 'text-decoration: underline; font-weight: bold;' : ''" 
                           data-toggle="tooltip" data-placement="bottom" data-html="true">
-                        ✔
+                        {{is_mobile ? "【点击查看】" : "⚠️"}}
                     </span>
                 </div>
                 <div class="form-group">
@@ -169,7 +170,13 @@
                         this.loading = true;
                         // wait till collapsed
                         setTimeout(() => { this.get_ans(); }, 250);
-                    }, 500)
+                    }, 500);
+                },
+                computed: {
+                    is_mobile: function () {
+                        let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+                        return flag != null;
+                    }
                 },
                 methods: {
                     ask: function() {
@@ -178,7 +185,6 @@
                             this.loading_hint = "还问？你不会自个百度吗🙄";
                             this.submit_text = "👴就是很好奇！";
                         }
-
                         this.debouncedGetAnswer();
                     },
                     get_ans: function () {
