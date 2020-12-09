@@ -168,8 +168,6 @@ def shortest_path_match(graph, name_1, label_1, relation, label_2):
     record_list = []
     for point in p1:
         record_list.append(point['q.name'])
-    if len(record_list) > 15:
-        record_list = random.sample(record_list, 15)
     return '、'.join(list(set(record_list)))
 
 def recommend_path(graph, name_1, label_1, relation_1, label_2, relation_2, label_3):
@@ -185,8 +183,6 @@ def recommend_path(graph, name_1, label_1, relation_1, label_2, relation_2, labe
     record_list = []
     for point in p1:
         record_list.append(point['w.name'])
-    if len(record_list) > 15:
-        record_list = random.sample(record_list, 15)
     return '、'.join(list(set(record_list)))
 
 
@@ -200,8 +196,6 @@ def special_deal_for_actor(graph, name_1, label_1, label_2):
     record_list = []
     for point in p1:
         record_list.append(point['w.name'])
-    if len(record_list) > 15:
-        record_list = random.sample(record_list, 15)
     return '、'.join(list(set(record_list)))
 
 
