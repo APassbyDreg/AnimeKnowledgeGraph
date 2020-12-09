@@ -98,59 +98,37 @@ def QA(question):
                     len(sentence_actor_list) == 0:
                 # return_list = recommend_path(graph, special_word,
                 #                              'bangumi', '出场', 'character', '声优', 'staff')
-<<<<<<< HEAD
-                return_list = special_deal_for_actor(graph, special_word, "bangumi", "staff")
-                # return_list = shortest_path_match(graph, special_word, "bangumi", "参与配音", "staff")
-                return "对于" + special_word + "您可能想了解的配音演员有:" + str(return_list)
-=======
                 return_list = special_deal_for_actor(
                     graph, special_word, "bangumi", "staff")
                 # return_list = shortest_path_match(graph, special_word, "bangumi", "参与配音", "staff")
                 return "对于" + special_word + "您可能想了解的配音演员有：" + str(return_list)
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
 
             if "角色" in sentence_flag_list or "登场人物" in sentence_flag_list and \
                     len(sentence_charactor_list) == 0:
                 return_list = shortest_path_match(graph, special_word,
                                                   'bangumi', '出场', 'character')
-<<<<<<< HEAD
-                return special_word + "的主要人物包括了:" + str(return_list)
-=======
                 return special_word + "的主要人物包括了：" + str(return_list)
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
 
             if "音乐" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与音乐制作', 'staff', '参与音乐制作', 'bangumi')
                 # if len(return_list) > 10:
                 #     return_list = random.sample(return_list, 10)
-<<<<<<< HEAD
-                return "推测您可能喜欢以下番剧:" + str(return_list)
-=======
                 return "推测您可能喜欢以下番剧：" + str(return_list)
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
 
             if "画风" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与原画制作', 'staff', '参与原画制作', 'bangumi')
                 # if len(return_list) > 10:
                 #     return_list = random.sample(return_list, 10)
-<<<<<<< HEAD
-                return "推测您可能喜欢以下番剧:" + str(return_list)
-=======
                 return "推测您可能喜欢以下番剧：" + str(return_list)
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
 
             if "剧情" in sentence_flag_list and ("喜欢" in sentence_flag_list or "推荐" in sentence_flag_list):
                 return_list = recommend_path(graph, special_word, 'bangumi',
                                              '参与内容制作', 'staff', '参与内容制作', 'bangumi')
                 # if len(return_list) > 10:
                 #     return_list = random.sample(return_list, 10)
-<<<<<<< HEAD
-                return "推测您可能喜欢以下番剧:" + str(return_list)
-=======
                 return "推测您可能喜欢以下番剧：" + str(return_list)
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
 
         elif special_word in charactor_list:
             if "配音演员" in sentence_flag_list or "声优" in sentence_flag_list or \
@@ -159,11 +137,7 @@ def QA(question):
                                                   'character', '声优', 'staff')
                 # print(special_word + "的配音演员是", return_list)
                 # return_list = list(set(return_list))
-<<<<<<< HEAD
-                return special_word + "的配音演员有:" + str(return_list)
-=======
                 return special_word + "的配音演员有：" + str(return_list)
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
             if "番剧" in sentence_flag_list or "番" in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'character', '出场', 'bangumi')
@@ -174,19 +148,11 @@ def QA(question):
                                                   'staff', '声优', 'character')
                 # if len(return_list) > 10:
                 #     return_list = random.sample(return_list, 10)
-<<<<<<< HEAD
-                return special_word + "配音了这些角色:" + str(return_list)
-            if "番剧" in sentence_flag_list or "番" in sentence_flag_list:
-                return_list = shortest_path_match(graph, special_word,
-                                                  'staff', '参与配音', 'bangumi')
-                return special_word + "参与配音的番剧有:" + str(return_list)
-=======
                 return special_word + "配音了这些角色：" + str(return_list)
             if "番剧" in sentence_flag_list or "番" in sentence_flag_list:
                 return_list = shortest_path_match(graph, special_word,
                                                   'staff', '参与配音', 'bangumi')
                 return special_word + "参与配音的番剧有：" + str(return_list)
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
 
 
 def shortest_path_match(graph, name_1, label_1, relation, label_2):
@@ -195,12 +161,8 @@ def shortest_path_match(graph, name_1, label_1, relation, label_2):
     for example: p = shortest_path_match(graph, "悠木碧", "staff", "配音", "charactor")
     """
     match_str = "MATCH (p:" + label_1 + \
-<<<<<<< HEAD
-                "{name: '" + name_1 + "' })-[" + relation + "]-(q:" + label_2 + ") RETURN q.name"
-=======
                 "{name: '" + name_1 + \
         "' })-[" + relation + "]-(q:" + label_2 + ") RETURN q.name"
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
     #print(match_str)
     p1 = list(graph.run(match_str))
     record_list = []
@@ -209,10 +171,6 @@ def shortest_path_match(graph, name_1, label_1, relation, label_2):
     if len(record_list) > 15:
         record_list = random.sample(record_list, 15)
     return '、'.join(list(set(record_list)))
-<<<<<<< HEAD
-=======
-
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
 
 def recommend_path(graph, name_1, label_1, relation_1, label_2, relation_2, label_3):
     """
@@ -230,22 +188,6 @@ def recommend_path(graph, name_1, label_1, relation_1, label_2, relation_2, labe
     if len(record_list) > 15:
         record_list = random.sample(record_list, 15)
     return '、'.join(list(set(record_list)))
-<<<<<<< HEAD
-
-def special_deal_for_actor(graph, name_1, label_1, label_2):
-    match_str = "MATCH (p:" + label_1 + \
-                "{name: '" + name_1 + "' })-[r:出场]-(q:character)-[t:声优]-(w:" \
-                + label_2 + ")-[v:参与配音]-(s:" + label_1 + "{name: '" + name_1 + "' }) RETURN w.name"
-    # print(match_str)
-    p1 = list(graph.run(match_str))
-    record_list = []
-    for point in p1:
-        record_list.append(point['w.name'])
-    if len(record_list) > 15:
-        record_list = random.sample(record_list, 15)
-    return '、'.join(list(set(record_list)))
-=======
->>>>>>> 168a509972d9f0e5674df44ee3a128ba8bf6efc9
 
 
 def special_deal_for_actor(graph, name_1, label_1, label_2):
