@@ -6,7 +6,9 @@ Resources:
     anime-qa:    
       Type: 'Aliyun::Serverless::Function'   
       Properties:     
-        Handler: index.handler     
+        Handler: index.handler    
+        Initializer: index.initializer 
+        InitializationTimeout: 16
         Runtime: python3
         CodeUri: './'
         MemorySize: 256
