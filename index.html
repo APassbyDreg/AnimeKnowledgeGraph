@@ -84,9 +84,8 @@
                 width: 2.4vh;
             }
             #credits {
-                position: fixed;
-                top: 90vh;
-                left: calc(50vw - 10em);
+                margin-top: 10vh;
+                margin-left: calc(50vw - 10em);
                 width: 20em;
                 text-align: center;
                 font-size: 1.2vh;
@@ -95,6 +94,30 @@
             }
             #credits:hover {
                 opacity: 0.75;
+            }
+            #more-less-switch {
+                font-weight: bold;
+                font-size: 1.8vh;
+                cursor: pointer;
+                width: 100%;
+                transition: all ease 0.3s;
+            }
+            #result {
+
+            }
+            #collapse-short {
+                position: relative;
+                top: 0;
+                line-height: 3vh;
+                height: 9vh;
+                overflow: hidden;
+                z-index: 1;
+            }
+            #collapse-full {
+                position: relative;
+                top: -9vh;
+                line-height: 3vh;
+                z-index: 0;
             }
             .result {
                 margin-top: 1em;
@@ -119,38 +142,54 @@
 
     <body>
         <div id="bg"></div>
-        <div id="credits">
-            <div>开发者：贺梓淇、曾博涵、王文辉</div>
-            <div><a href="https://github.com/APassbyDreg/AnimeKnowledgeGraph">[Source on GitHub]</a></div>
-        </div>
-        <div id="main" style="width: 100vw; height: 100vh;" class="d-flex align-content-center flex-wrap justify-content-center align-self-center">
-            <div class="container-sm" id="main-container">
-                <h1 id="heading">二刺螈Q&A</h1>
-                <div id="tips">
-                    我能这么问 → 
-                    <span style="cursor: pointer;" :title="tip"
-                          :style="is_mobile ? 'text-decoration: underline; font-weight: bold;' : ''" 
-                          data-toggle="tooltip" data-placement="bottom" data-html="true">
-                        {{is_mobile ? "【点击查看】" : "⚠️"}}
-                    </span>
-                </div>
-                <div class="form-group">
-                    <input v-model="question" class="form-control" id="q-input">
-                </div>
-                <button @click="ask" class="btn btn-primary" style="width: 100%;" id="submit-btn">
-                    <span v-if="loading">
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="loading-icon"></span>
-                        {{loading_hint}}
-                    </span>
-                    <span v-else>
-                        {{submit_text}}
-                    </span>
-                </button>
-                <div class="collapse result" id="collapseExample">
-                    <div class="card card-body result-content">
-                        {{answer}}
+        <div style="height: 100vh; width: 100vw; overflow: auto;">
+            <div id="main" style="width: 100vw; height: 100vh;"
+                class="d-flex align-content-center flex-wrap justify-content-center align-self-center">
+                <div class="container-sm" id="main-container">
+                    <h1 id="heading">二刺螈Q&A</h1>
+                    <div id="tips">
+                        我能这么问 →
+                        <span style="cursor: pointer;" :title="tip"
+                            :style="is_mobile ? 'text-decoration: underline; font-weight: bold;' : ''" data-toggle="tooltip"
+                            data-placement="bottom" data-html="true">
+                            {{is_mobile ? "【点击查看】" : "⚠️"}}
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <input v-model="question" class="form-control" id="q-input">
+                    </div>
+                    <button @click="ask" class="btn btn-primary" style="width: 100%;" id="submit-btn">
+                        <span v-if="loading">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                                id="loading-icon"></span>
+                            {{loading_hint}}
+                        </span>
+                        <span v-else>
+                            {{submit_text}}
+                        </span>
+                    </button>
+                    <div id="result" class="card result">
+                        <div class="collapse" id="collapse-short">
+                            <div class="result-content">
+                                {{answer}}
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapse-full">
+                            <div class="result-content">
+                                {{answer}}
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapse-switch">
+                            <button class="btn btn-secondary" id="more-less-switch" @click="toggle_short">
+                                {{short ? "more" : "less"}}
+                            </button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div id="credits">
+                <div>开发者：贺梓淇、曾博涵、王文辉</div>
+                <div><a href="https://github.com/APassbyDreg/AnimeKnowledgeGraph">[Source on GitHub]</a></div>
             </div>
         </div>
 
@@ -166,11 +205,13 @@
                 data: {
                     question: "",
                     answer: "",
+                    answer_display: "",
                     tip: "<div style='text-align:left'>【番剧】的（配音演员/角色）都有哪些</br>【声优】担当过什么（番剧/角色）的配音</br>【角色】是哪个番剧里的角色</br>【角色】的配音演员是谁</br>【番剧】的（画风/剧情/音乐）我很喜欢，有什么推荐吗</div>",
                     loading_hint: "在想了，你急个🔨",
                     submit_text: "👴很好奇！",
                     loading: false,
-                    ask_cnt: 0
+                    ask_cnt: 0,
+                    short: true
                 },
                 created: function () {
                     // `_.debounce` 是一个通过 Lodash 限制操作频率的函数。
@@ -201,35 +242,35 @@
                         this.debouncedGetAnswer();
                     },
                     get_ans: function () {
-                        let url_jp = "https://1354839170291685.ap-northeast-1.fc.aliyuncs.com/2016-08-15/proxy/anime-knowledge-graph/anime-qa/?question=";
                         let url_cn = "https://1354839170291685.cn-beijing.fc.aliyuncs.com/2016-08-15/proxy/anime-knowledge-graph/anime-qa/?question="
                         this.$http.get(url_cn + encodeURIComponent(this.question)).then(res => {
                             if (res.body['success']) {
                                 this.answer = res.body["result"];
-                                $('.collapse').collapse("show");
+                                this.update_ans_display();
+                                $('#collapse-short').collapse("show");
+                                $('#collapse-switch').collapse("show");
                             }
                             else {
                                 alert(res.body["result"]);
                             }
                             this.loading = false;
                         }, res => {
-                            console.log("failed to connect to cn api, trying jp api...")
-                            this.$http.get(url_jp + encodeURIComponent(this.question)).then(res => {
-                                if (res.body['success']) {
-                                    console.log("success");
-                                    this.answer = res.body["result"];
-                                    $('.collapse').collapse("show");
-                                }
-                                else {
-                                    alert(res.body["result"]);
-                                }
-                                this.loading = false;
-                            }, res => {
-                                this.loading = false;
-                                alert("error connection: status=" + res.status);
-                            })
+                            this.loading = false;
+                            alert("error connection: status=" + res.status);
                         })
                     },
+                    toggle_short: function () {
+                        this.short = !this.short;
+                        this.update_ans_display();
+                    },
+                    update_ans_display: function() {
+                        if (this.short) {
+                            this.answer_display = this.answer.substring(0, 100) + " ...";
+                        }
+                        else {
+                            this.answer_display = this.answer;
+                        }
+                    }
                 }
             })
 
