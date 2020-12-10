@@ -22,6 +22,7 @@
         <style>
             body {
                 background-color: white;
+                overflow-y: overlay;
             }
             h1 {
                 font-size: 4.5vh;
@@ -48,7 +49,11 @@
                 filter: blur(4px);
             }
             #main {
-                font-size: 2.1vh;
+                font-size: 2vh;
+                margin-top: 25vh;
+                width: 100%;
+                height: auto;
+                transition: all ease 0.6s;
             }
             #main-container {
                 background-color: white;
@@ -56,7 +61,7 @@
                 box-shadow: rgba(0, 0, 0, 0.2) 0.2em 0.2em 0.5em;
                 max-width: 900px; 
                 padding: 1.2em;
-                margin: 2em;
+                margin: 2em auto;
                 transition: all ease 0.5s;
             }
             #main-container:hover {
@@ -84,9 +89,8 @@
                 width: 2.4vh;
             }
             #credits {
-                margin-top: 10vh;
-                margin-left: calc(50vw - 10em);
-                width: 20em;
+                width: 100%;
+                margin-bottom: 2vh;
                 text-align: center;
                 font-size: 1.2vh;
                 opacity: 0.5;
@@ -95,35 +99,20 @@
             #credits:hover {
                 opacity: 0.75;
             }
-            #more-less-switch {
-                font-weight: bold;
-                font-size: 1.8vh;
-                cursor: pointer;
-                width: 100%;
-                transition: all ease 0.3s;
-            }
             #result {
-
-            }
-            #collapse-short {
-                position: relative;
-                top: 0;
-                line-height: 3vh;
-                height: 9vh;
-                overflow: hidden;
-                z-index: 1;
-            }
-            #collapse-full {
-                position: relative;
-                top: -9vh;
-                line-height: 3vh;
-                z-index: 0;
-            }
-            .result {
-                margin-top: 1em;
-            }
-            .result-content {
+                margin-top: 3vh;
                 background-color: #e8f2ff;
+                border-radius: 1vh!important;
+            }
+            #result-content {
+                padding: 3vh;
+                max-height: 12vh;
+                overflow: hidden;
+            }
+            #more-less-switch {
+                width: 100%;
+                font-size: 1.8vh;
+                border-radius: 0 0 1vh 1vh;
             }
             .tooltip-inner {
                 font-size: 1.5vh;
@@ -142,16 +131,15 @@
 
     <body>
         <div id="bg"></div>
-        <div style="height: 100vh; width: 100vw; overflow: auto;">
-            <div id="main" style="width: 100vw; height: 100vh;"
-                class="d-flex align-content-center flex-wrap justify-content-center align-self-center">
+        <div id="main">
+            <div ref="full">
                 <div class="container-sm" id="main-container">
                     <h1 id="heading">二刺螈Q&A</h1>
                     <div id="tips">
-                        我能这么问 →
+                        我能这么问 → 
                         <span style="cursor: pointer;" :title="tip"
-                            :style="is_mobile ? 'text-decoration: underline; font-weight: bold;' : ''" data-toggle="tooltip"
-                            data-placement="bottom" data-html="true">
+                              :style="is_mobile ? 'text-decoration: underline; font-weight: bold;' : ''" 
+                              data-toggle="tooltip" data-placement="bottom" data-html="true">
                             {{is_mobile ? "【点击查看】" : "⚠️"}}
                         </span>
                     </div>
@@ -160,36 +148,32 @@
                     </div>
                     <button @click="ask" class="btn btn-primary" style="width: 100%;" id="submit-btn">
                         <span v-if="loading">
-                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
-                                id="loading-icon"></span>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="loading-icon"></span>
                             {{loading_hint}}
                         </span>
                         <span v-else>
                             {{submit_text}}
                         </span>
                     </button>
-                    <div id="result" class="card result">
-                        <div class="collapse" id="collapse-short">
-                            <div class="result-content">
+                    <div class="collapse" id="result">
+                        <div class="" id="result-content">
+                            <div style="display: inline; line-height: 3vh;" ref="ans">
                                 {{answer}}
                             </div>
                         </div>
-                        <div class="collapse" id="collapse-full">
-                            <div class="result-content">
-                                {{answer}}
-                            </div>
-                        </div>
-                        <div class="collapse" id="collapse-switch">
-                            <button class="btn btn-secondary" id="more-less-switch" @click="toggle_short">
-                                {{short ? "more" : "less"}}
-                            </button>
-                        </div>
+                        <button @click="toggle_short"
+                                :class=""
+                                class="btn btn-secondary btn-sm"
+                                id="more-less-switch"
+                                v-show="is_long_ans">
+                            {{show_full_ans ? "show less" : "show more"}}
+                        </button>
                     </div>
+                </div>  
+                <div id="credits">
+                    <div>开发者：贺梓淇、曾博涵、王文辉</div>
+                    <div><a href="https://github.com/APassbyDreg/AnimeKnowledgeGraph">[Source on GitHub]</a></div>
                 </div>
-            </div>
-            <div id="credits">
-                <div>开发者：贺梓淇、曾博涵、王文辉</div>
-                <div><a href="https://github.com/APassbyDreg/AnimeKnowledgeGraph">[Source on GitHub]</a></div>
             </div>
         </div>
 
@@ -205,13 +189,13 @@
                 data: {
                     question: "",
                     answer: "",
-                    answer_display: "",
                     tip: "<div style='text-align:left'>【番剧】的（配音演员/角色）都有哪些</br>【声优】担当过什么（番剧/角色）的配音</br>【角色】是哪个番剧里的角色</br>【角色】的配音演员是谁</br>【番剧】的（画风/剧情/音乐）我很喜欢，有什么推荐吗</div>",
                     loading_hint: "在想了，你急个🔨",
                     submit_text: "👴很好奇！",
                     loading: false,
                     ask_cnt: 0,
-                    short: true
+                    show_full_ans: false,
+                    is_long_ans: false
                 },
                 created: function () {
                     // `_.debounce` 是一个通过 Lodash 限制操作频率的函数。
@@ -246,9 +230,7 @@
                         this.$http.get(url_cn + encodeURIComponent(this.question)).then(res => {
                             if (res.body['success']) {
                                 this.answer = res.body["result"];
-                                this.update_ans_display();
-                                $('#collapse-short').collapse("show");
-                                $('#collapse-switch').collapse("show");
+                                $('.collapse').collapse("show");
                             }
                             else {
                                 alert(res.body["result"]);
@@ -259,18 +241,34 @@
                             alert("error connection: status=" + res.status);
                         })
                     },
-                    toggle_short: function () {
-                        this.short = !this.short;
-                        this.update_ans_display();
+                    update_content_layout: function () {
+                        // update content margin top
+                        let h = this.$refs.full.clientHeight + "px";
+                        document.getElementById("main").style.marginTop = "max(10vh, calc(90vh - " + h + "))";
+
+                        // update is long ans
+                        let ans_lines = this.count_ans_lines();
+                        this.is_long_ans = ans_lines > 3;
                     },
-                    update_ans_display: function() {
-                        if (this.short) {
-                            this.answer_display = this.answer.substring(0, 100) + " ...";
+                    toggle_short: function () {
+                        this.show_full_ans = !this.show_full_ans;
+                        if (this.show_full_ans) {
+                            document.getElementById("result-content").style.maxHeight = "none";
                         }
                         else {
-                            this.answer_display = this.answer;
+                            document.getElementById("result-content").style.maxHeight = "12vh";
                         }
+                    },
+                    count_ans_lines: function () {
+                        let total_height = this.$refs.ans.offsetHeight;
+                        let line_height = window.innerHeight * 0.03;
+                        return Math.ceil(total_height / line_height);
                     }
+                },
+                mounted: function () {
+                    setInterval(() => {
+                        this.update_content_layout()
+                    }, 100);
                 }
             })
 
