@@ -1,5 +1,7 @@
 # AnimeKnowledgeGraph
 
+> 由于服务器到期了，一下接口都已失效，如有需求请您移步源码自行构建知识图谱和服务
+
 ## 开放 API 接口
 
 - URL ：`http://api.apassbydreg.work/anime-qa?question={question_in_chinese}` via `GET / POST`
